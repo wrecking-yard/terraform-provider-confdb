@@ -1,0 +1,776 @@
+2025-11-06T22:38:30.765+0100 [INFO]  Terraform version: 1.13.5
+2025-11-06T22:38:30.765+0100 [DEBUG] using github.com/hashicorp/go-tfe v1.74.1
+2025-11-06T22:38:30.765+0100 [DEBUG] using github.com/hashicorp/hcl/v2 v2.24.0
+2025-11-06T22:38:30.765+0100 [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.1
+2025-11-06T22:38:30.765+0100 [DEBUG] using github.com/zclconf/go-cty v1.16.3
+2025-11-06T22:38:30.765+0100 [INFO]  Go runtime version: go1.24.5
+2025-11-06T22:38:30.765+0100 [INFO]  CLI args: []string{"terraform", "plan"}
+2025-11-06T22:38:30.765+0100 [TRACE] Stdout is a terminal of width 231
+2025-11-06T22:38:30.765+0100 [TRACE] Stderr is not a terminal
+2025-11-06T22:38:30.765+0100 [TRACE] Stdin is a terminal
+2025-11-06T22:38:30.765+0100 [DEBUG] Attempting to open CLI config file: /home/fmn/.terraformrc
+2025-11-06T22:38:30.765+0100 [INFO]  Loading CLI configuration from /home/fmn/.terraformrc
+2025-11-06T22:38:30.765+0100 [DEBUG] Explicit provider installation configuration is set
+2025-11-06T22:38:30.765+0100 [TRACE] Selected provider installation method cliconfig.ProviderInstallationDirect with includes [] and excludes []
+2025-11-06T22:38:30.765+0100 [INFO]  CLI command args: []string{"plan"}
+2025-11-06T22:38:30.765+0100 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2025-11-06T22:38:30.765+0100 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2025-11-06T22:38:30.765+0100 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2025-11-06T22:38:30.765+0100 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2025-11-06T22:38:30.765+0100 [DEBUG] Provider localhost/dev/confdb is overridden by dev_overrides
+2025-11-06T22:38:30.765+0100 [DEBUG] Provider localhost/dev/confdb is overridden to load from /home/fmn/go/bin
+2025-11-06T22:38:30.765+0100 [DEBUG] checking for provisioner in "."
+2025-11-06T22:38:30.765+0100 [DEBUG] checking for provisioner in "/opt/terraform-1.13.5/bin"
+2025-11-06T22:38:30.765+0100 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2025-11-06T22:38:30.765+0100 [DEBUG] Provider localhost/dev/confdb is overridden by dev_overrides
+2025-11-06T22:38:30.765+0100 [INFO]  backend/local: starting Plan operation
+2025-11-06T22:38:30.765+0100 [TRACE] backend/local: requesting state manager for workspace "default"
+2025-11-06T22:38:30.765+0100 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2025-11-06T22:38:30.765+0100 [TRACE] backend/local: requesting state lock for workspace "default"
+2025-11-06T22:38:30.765+0100 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2025-11-06T22:38:30.766+0100 [TRACE] statemgr.Filesystem: no previously-stored snapshot exists
+2025-11-06T22:38:30.766+0100 [TRACE] statemgr.Filesystem: locking terraform.tfstate using fcntl flock
+2025-11-06T22:38:30.766+0100 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2025-11-06T22:38:30.766+0100 [TRACE] backend/local: reading remote state for workspace "default"
+2025-11-06T22:38:30.766+0100 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2025-11-06T22:38:30.766+0100 [TRACE] statemgr.Filesystem: snapshot file has nil snapshot, but that's okay
+2025-11-06T22:38:30.766+0100 [TRACE] statemgr.Filesystem: read nil snapshot
+2025-11-06T22:38:30.766+0100 [TRACE] backend/local: populating backendrun.LocalRun for current working directory
+2025-11-06T22:38:30.766+0100 [DEBUG] Config.VerifyDependencySelections: skipping localhost/dev/confdb because it's overridden by a special configuration setting
+2025-11-06T22:38:30.766+0100 [TRACE] terraform.NewContext: starting
+2025-11-06T22:38:30.766+0100 [TRACE] terraform.NewContext: complete
+2025-11-06T22:38:30.766+0100 [TRACE] backend/local: requesting interactive input, if necessary
+2025-11-06T22:38:30.766+0100 [TRACE] LoadSchemas: retrieving schema for provider type "localhost/dev/confdb"
+2025-11-06T22:38:30.766+0100 [TRACE] terraform.contextPlugins: Initializing provider "localhost/dev/confdb" to read its schema
+2025-11-06T22:38:30.766+0100 [DEBUG] created provider logger: level=trace
+2025-11-06T22:38:30.766+0100 [INFO]  provider: configuring client automatic mTLS
+2025-11-06T22:38:30.771+0100 [DEBUG] provider: starting plugin: path=/home/fmn/go/bin/terraform-provider-confdb args=["/home/fmn/go/bin/terraform-provider-confdb"]
+2025-11-06T22:38:30.771+0100 [DEBUG] provider: plugin started: path=/home/fmn/go/bin/terraform-provider-confdb pid=1707733
+2025-11-06T22:38:30.771+0100 [DEBUG] provider: waiting for RPC address: plugin=/home/fmn/go/bin/terraform-provider-confdb
+2025-11-06T22:38:30.775+0100 [INFO]  provider.terraform-provider-confdb: configuring server automatic mTLS: timestamp="2025-11-06T22:38:30.775+0100"
+2025-11-06T22:38:30.781+0100 [DEBUG] provider: using plugin: version=6
+2025-11-06T22:38:30.781+0100 [DEBUG] provider.terraform-provider-confdb: plugin address: address=/tmp/plugin2497775836 network=unix timestamp="2025-11-06T22:38:30.781+0100"
+2025-11-06T22:38:30.786+0100 [TRACE] GRPCProvider.v6: GetProviderSchema
+2025-11-06T22:38:30.786+0100 [TRACE] provider.stdio: waiting for stdio data
+2025-11-06T22:38:30.786+0100 [TRACE] provider.terraform-provider-confdb: Received request: @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/tf6server/server.go:544 tf_proto_version=6.10 tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 @module=sdk.proto tf_provider_addr=localhost/dev/confdb tf_rpc=GetProviderSchema timestamp="2025-11-06T22:38:30.786+0100"
+2025-11-06T22:38:30.786+0100 [TRACE] provider.terraform-provider-confdb: Sending request downstream: @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/internal/tf6serverlogging/downstream_request.go:22 @module=sdk.proto tf_provider_addr=localhost/dev/confdb tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 tf_rpc=GetProviderSchema tf_proto_version=6.10 timestamp="2025-11-06T22:38:30.786+0100"
+2025-11-06T22:38:30.786+0100 [TRACE] provider.terraform-provider-confdb: Checking ProviderSchema lock: tf_rpc=GetProviderSchema @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:455 @module=sdk.framework tf_provider_addr=localhost/dev/confdb tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 timestamp="2025-11-06T22:38:30.786+0100"
+2025-11-06T22:38:30.786+0100 [TRACE] provider.terraform-provider-confdb: Calling provider defined Provider Schema: @module=sdk.framework tf_provider_addr=localhost/dev/confdb tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 tf_rpc=GetProviderSchema @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:466 timestamp="2025-11-06T22:38:30.786+0100"
+2025-11-06T22:38:30.786+0100 [TRACE] provider.terraform-provider-confdb: Called provider defined Provider Schema: tf_rpc=GetProviderSchema @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:468 @module=sdk.framework tf_provider_addr=localhost/dev/confdb tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 timestamp="2025-11-06T22:38:30.786+0100"
+2025-11-06T22:38:30.786+0100 [TRACE] provider.terraform-provider-confdb: Checking ResourceTypes lock: tf_rpc=GetProviderSchema @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:605 @module=sdk.framework tf_provider_addr=localhost/dev/confdb tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 timestamp="2025-11-06T22:38:30.786+0100"
+2025-11-06T22:38:30.786+0100 [TRACE] provider.terraform-provider-confdb: Checking ProviderTypeName lock: tf_provider_addr=localhost/dev/confdb tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 tf_rpc=GetProviderSchema @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:432 @module=sdk.framework timestamp="2025-11-06T22:38:30.786+0100"
+2025-11-06T22:38:30.786+0100 [TRACE] provider.terraform-provider-confdb: Calling provider defined Provider Metadata: tf_provider_addr=localhost/dev/confdb tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 tf_rpc=GetProviderSchema @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:443 @module=sdk.framework timestamp="2025-11-06T22:38:30.786+0100"
+2025-11-06T22:38:30.786+0100 [TRACE] provider.terraform-provider-confdb: Called provider defined Provider Metadata: tf_provider_addr=localhost/dev/confdb tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 tf_rpc=GetProviderSchema @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:445 @module=sdk.framework timestamp="2025-11-06T22:38:30.786+0100"
+2025-11-06T22:38:30.786+0100 [TRACE] provider.terraform-provider-confdb: Calling provider defined Provider Resources: tf_provider_addr=localhost/dev/confdb tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 tf_rpc=GetProviderSchema @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:616 @module=sdk.framework timestamp="2025-11-06T22:38:30.786+0100"
+2025-11-06T22:38:30.786+0100 [TRACE] provider.terraform-provider-confdb: Called provider defined Provider Resources: @module=sdk.framework tf_provider_addr=localhost/dev/confdb tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 tf_rpc=GetProviderSchema @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:618 timestamp="2025-11-06T22:38:30.786+0100"
+2025-11-06T22:38:30.786+0100 [TRACE] provider.terraform-provider-confdb: Checking DataSourceTypes lock: tf_provider_addr=localhost/dev/confdb tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 tf_rpc=GetProviderSchema @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:276 @module=sdk.framework timestamp="2025-11-06T22:38:30.786+0100"
+2025-11-06T22:38:30.786+0100 [TRACE] provider.terraform-provider-confdb: Checking ProviderTypeName lock: @module=sdk.framework tf_provider_addr=localhost/dev/confdb tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 tf_rpc=GetProviderSchema @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:432 timestamp="2025-11-06T22:38:30.786+0100"
+2025-11-06T22:38:30.786+0100 [TRACE] provider.terraform-provider-confdb: Calling provider defined Provider DataSources: tf_rpc=GetProviderSchema @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:287 @module=sdk.framework tf_provider_addr=localhost/dev/confdb tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 timestamp="2025-11-06T22:38:30.786+0100"
+2025-11-06T22:38:30.786+0100 [TRACE] provider.terraform-provider-confdb: Called provider defined Provider DataSources: @module=sdk.framework tf_provider_addr=localhost/dev/confdb tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 tf_rpc=GetProviderSchema @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:289 timestamp="2025-11-06T22:38:30.786+0100"
+2025-11-06T22:38:30.786+0100 [TRACE] provider.terraform-provider-confdb: Found data source type: tf_rpc=GetProviderSchema @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:310 tf_data_source_type=confdb_vnet tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 @module=sdk.framework tf_provider_addr=localhost/dev/confdb timestamp="2025-11-06T22:38:30.786+0100"
+2025-11-06T22:38:30.786+0100 [TRACE] provider.terraform-provider-confdb: Found data source type: tf_data_source_type=confdb_default_vnet tf_provider_addr=localhost/dev/confdb tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 tf_rpc=GetProviderSchema @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:310 @module=sdk.framework timestamp="2025-11-06T22:38:30.786+0100"
+2025-11-06T22:38:30.786+0100 [TRACE] provider.terraform-provider-confdb: Calling provider defined DataSource Schema: tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 tf_rpc=GetProviderSchema tf_data_source_type=confdb_default_vnet tf_provider_addr=localhost/dev/confdb @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:406 @module=sdk.framework timestamp="2025-11-06T22:38:30.786+0100"
+2025-11-06T22:38:30.787+0100 [TRACE] provider.terraform-provider-confdb: Called provider defined DataSource Schema: tf_provider_addr=localhost/dev/confdb @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:408 tf_data_source_type=confdb_default_vnet tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 tf_rpc=GetProviderSchema @module=sdk.framework timestamp="2025-11-06T22:38:30.787+0100"
+2025-11-06T22:38:30.787+0100 [TRACE] provider.terraform-provider-confdb: Calling provider defined DataSource Schema: tf_data_source_type=confdb_vnet tf_provider_addr=localhost/dev/confdb tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 tf_rpc=GetProviderSchema @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:406 @module=sdk.framework timestamp="2025-11-06T22:38:30.787+0100"
+2025-11-06T22:38:30.787+0100 [TRACE] provider.terraform-provider-confdb: Called provider defined DataSource Schema: @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:408 @module=sdk.framework tf_data_source_type=confdb_vnet tf_provider_addr=localhost/dev/confdb tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 tf_rpc=GetProviderSchema timestamp="2025-11-06T22:38:30.787+0100"
+2025-11-06T22:38:30.787+0100 [TRACE] provider.terraform-provider-confdb: Checking FunctionTypes lock: @module=sdk.framework tf_provider_addr=localhost/dev/confdb tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 tf_rpc=GetProviderSchema @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server_functions.go:124 timestamp="2025-11-06T22:38:30.787+0100"
+2025-11-06T22:38:30.787+0100 [TRACE] provider.terraform-provider-confdb: Checking EphemeralResourceFuncs lock: tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 tf_rpc=GetProviderSchema @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server_ephemeralresources.go:38 @module=sdk.framework tf_provider_addr=localhost/dev/confdb timestamp="2025-11-06T22:38:30.787+0100"
+2025-11-06T22:38:30.787+0100 [TRACE] provider.terraform-provider-confdb: Checking ProviderTypeName lock: tf_provider_addr=localhost/dev/confdb tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 tf_rpc=GetProviderSchema @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:432 @module=sdk.framework timestamp="2025-11-06T22:38:30.787+0100"
+2025-11-06T22:38:30.787+0100 [TRACE] provider.terraform-provider-confdb: Checking ActionFuncs lock: @module=sdk.framework tf_provider_addr=localhost/dev/confdb tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 tf_rpc=GetProviderSchema @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server_actions.go:38 timestamp="2025-11-06T22:38:30.787+0100"
+2025-11-06T22:38:30.787+0100 [TRACE] provider.terraform-provider-confdb: Checking ProviderTypeName lock: tf_rpc=GetProviderSchema @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:432 @module=sdk.framework tf_provider_addr=localhost/dev/confdb tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 timestamp="2025-11-06T22:38:30.787+0100"
+2025-11-06T22:38:30.787+0100 [TRACE] provider.terraform-provider-confdb: Received downstream response: tf_req_duration_ms=1 tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/internal/tf6serverlogging/downstream_request.go:61 @module=sdk.proto diagnostic_warning_count=0 tf_proto_version=6.10 tf_rpc=GetProviderSchema diagnostic_error_count=0 tf_provider_addr=localhost/dev/confdb timestamp="2025-11-06T22:38:30.787+0100"
+2025-11-06T22:38:30.787+0100 [TRACE] provider.terraform-provider-confdb: Announced server capabilities: tf_proto_version=6.10 tf_provider_addr=localhost/dev/confdb tf_server_capability_get_provider_schema_optional=true @module=sdk.proto tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 tf_rpc=GetProviderSchema tf_server_capability_move_resource_state=true tf_server_capability_plan_destroy=true @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/internal/tf6serverlogging/server_capabilities.go:27 timestamp="2025-11-06T22:38:30.787+0100"
+2025-11-06T22:38:30.787+0100 [TRACE] provider.terraform-provider-confdb: Served request: tf_rpc=GetProviderSchema @module=sdk.proto tf_proto_version=6.10 tf_provider_addr=localhost/dev/confdb tf_req_id=e0e88fbd-7e14-ba86-353a-9b436e2a5c24 @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/tf6server/server.go:563 timestamp="2025-11-06T22:38:30.787+0100"
+2025-11-06T22:38:30.788+0100 [TRACE] provider.terraform-provider-confdb: Received request: @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/tf6server/server.go:571 @module=sdk.proto tf_proto_version=6.10 tf_provider_addr=localhost/dev/confdb tf_req_id=b0e229f1-f570-948d-755d-5df22b8dd0ae tf_rpc=GetResourceIdentitySchemas timestamp="2025-11-06T22:38:30.788+0100"
+2025-11-06T22:38:30.788+0100 [TRACE] provider.terraform-provider-confdb: Sending request downstream: @module=sdk.proto tf_proto_version=6.10 tf_provider_addr=localhost/dev/confdb tf_req_id=b0e229f1-f570-948d-755d-5df22b8dd0ae tf_rpc=GetResourceIdentitySchemas @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/internal/tf6serverlogging/downstream_request.go:22 timestamp="2025-11-06T22:38:30.788+0100"
+2025-11-06T22:38:30.788+0100 [TRACE] provider.terraform-provider-confdb: Checking ResourceTypes lock: tf_rpc=GetResourceIdentitySchemas @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:605 @module=sdk.framework tf_provider_addr=localhost/dev/confdb tf_req_id=b0e229f1-f570-948d-755d-5df22b8dd0ae timestamp="2025-11-06T22:38:30.788+0100"
+2025-11-06T22:38:30.788+0100 [TRACE] provider.terraform-provider-confdb: Received downstream response: diagnostic_error_count=0 tf_rpc=GetResourceIdentitySchemas @module=sdk.proto diagnostic_warning_count=0 tf_proto_version=6.10 tf_provider_addr=localhost/dev/confdb tf_req_duration_ms=0 tf_req_id=b0e229f1-f570-948d-755d-5df22b8dd0ae @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/internal/tf6serverlogging/downstream_request.go:61 timestamp="2025-11-06T22:38:30.788+0100"
+2025-11-06T22:38:30.788+0100 [TRACE] provider.terraform-provider-confdb: Served request: @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/tf6server/server.go:589 @module=sdk.proto tf_proto_version=6.10 tf_rpc=GetResourceIdentitySchemas tf_provider_addr=localhost/dev/confdb tf_req_id=b0e229f1-f570-948d-755d-5df22b8dd0ae timestamp="2025-11-06T22:38:30.788+0100"
+2025-11-06T22:38:30.788+0100 [DEBUG] No provider meta schema returned
+2025-11-06T22:38:30.788+0100 [TRACE] GRPCProvider.v6: Close
+2025-11-06T22:38:30.788+0100 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2025-11-06T22:38:30.789+0100 [INFO]  provider: plugin process exited: plugin=/home/fmn/go/bin/terraform-provider-confdb id=1707733
+2025-11-06T22:38:30.794+0100 [DEBUG] provider: plugin exited
+2025-11-06T22:38:30.794+0100 [TRACE] Context.Input: Prompting for provider arguments
+2025-11-06T22:38:30.794+0100 [TRACE] Context.Input: Provider provider.confdb declared at main.tf:9,1-18
+2025-11-06T22:38:30.794+0100 [TRACE] Context.Input: Input for provider.confdb: map[string]cty.Value{}
+2025-11-06T22:38:30.794+0100 [TRACE] backend/local: running validation operation
+2025-11-06T22:38:30.794+0100 [TRACE] LoadSchemas: retrieving schema for provider type "localhost/dev/confdb"
+2025-11-06T22:38:30.794+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.794+0100 [DEBUG] Building and walking validate graph
+2025-11-06T22:38:30.794+0100 [TRACE] building graph for walkValidate
+2025-11-06T22:38:30.794+0100 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2025-11-06T22:38:30.794+0100 [TRACE] ConfigTransformer: Starting for path:
+2025-11-06T22:38:30.794+0100 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2025-11-06T22:38:30.794+0100 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2025-11-06T22:38:30.794+0100 [TRACE] Executing graph transform *terraform.variableValidationTransformer
+2025-11-06T22:38:30.794+0100 [TRACE] variableValidationTransformer: adding validation nodes for any existing variable evaluation nodes
+2025-11-06T22:38:30.794+0100 [TRACE] Executing graph transform *terraform.LocalTransformer
+2025-11-06T22:38:30.794+0100 [TRACE] Executing graph transform *terraform.OutputTransformer
+2025-11-06T22:38:30.794+0100 [TRACE] OutputTransformer: adding x as *terraform.nodeExpandOutput
+2025-11-06T22:38:30.795+0100 [TRACE] OutputTransformer: adding y as *terraform.nodeExpandOutput
+2025-11-06T22:38:30.795+0100 [TRACE] Executing graph transform *terraform.checkTransformer
+2025-11-06T22:38:30.795+0100 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2025-11-06T22:38:30.795+0100 [TRACE] Executing graph transform *terraform.StateTransformer
+2025-11-06T22:38:30.795+0100 [TRACE] StateTransformer: pointless no-op call, creating no nodes at all
+2025-11-06T22:38:30.795+0100 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2025-11-06T22:38:30.795+0100 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2025-11-06T22:38:30.795+0100 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2025-11-06T22:38:30.795+0100 [TRACE] AttachResourceConfigTransformer: attaching to "data.confdb_vnet.some_vnet" (*terraform.NodeValidatableResource) config from hcl.Range{Filename:"main.tf", Start:hcl.Pos{Line:15, Column:1, Byte:207}, End:hcl.Pos{Line:15, Column:31, Byte:237}}
+2025-11-06T22:38:30.795+0100 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.confdb_vnet.some_vnet
+2025-11-06T22:38:30.795+0100 [TRACE] AttachResourceConfigTransformer: attaching to "data.confdb_default_vnet.default_vnet" (*terraform.NodeValidatableResource) config from hcl.Range{Filename:"main.tf", Start:hcl.Pos{Line:16, Column:1, Byte:241}, End:hcl.Pos{Line:16, Column:42, Byte:282}}
+2025-11-06T22:38:30.795+0100 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.confdb_default_vnet.default_vnet
+2025-11-06T22:38:30.795+0100 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2025-11-06T22:38:30.795+0100 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.externalProviderTransformer
+2025-11-06T22:38:30.795+0100 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.externalProviderTransformer with new graph:
+  data.confdb_default_vnet.default_vnet - *terraform.NodeValidatableResource
+  data.confdb_vnet.some_vnet - *terraform.NodeValidatableResource
+  output.x (expand) - *terraform.nodeExpandOutput
+  output.y (expand) - *terraform.nodeExpandOutput
+  ------
+2025-11-06T22:38:30.795+0100 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2025-11-06T22:38:30.795+0100 [TRACE] ProviderConfigTransformer: attaching to "provider[\"localhost/dev/confdb\"]" provider configuration from main.tf:9,1-18
+2025-11-06T22:38:30.795+0100 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  data.confdb_default_vnet.default_vnet - *terraform.NodeValidatableResource
+  data.confdb_vnet.some_vnet - *terraform.NodeValidatableResource
+  output.x (expand) - *terraform.nodeExpandOutput
+  output.y (expand) - *terraform.nodeExpandOutput
+  provider["localhost/dev/confdb"] - *terraform.NodeApplyableProvider
+  ------
+2025-11-06T22:38:30.795+0100 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2025-11-06T22:38:30.795+0100 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2025-11-06T22:38:30.795+0100 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2025-11-06T22:38:30.795+0100 [TRACE] ProviderTransformer: exact match for provider["localhost/dev/confdb"] serving data.confdb_vnet.some_vnet
+2025-11-06T22:38:30.795+0100 [DEBUG] ProviderTransformer: "data.confdb_vnet.some_vnet" (*terraform.NodeValidatableResource) needs provider["localhost/dev/confdb"]
+2025-11-06T22:38:30.795+0100 [TRACE] ProviderTransformer: exact match for provider["localhost/dev/confdb"] serving data.confdb_default_vnet.default_vnet
+2025-11-06T22:38:30.795+0100 [DEBUG] ProviderTransformer: "data.confdb_default_vnet.default_vnet" (*terraform.NodeValidatableResource) needs provider["localhost/dev/confdb"]
+2025-11-06T22:38:30.795+0100 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  data.confdb_default_vnet.default_vnet - *terraform.NodeValidatableResource
+    provider["localhost/dev/confdb"] - *terraform.NodeApplyableProvider
+  data.confdb_vnet.some_vnet - *terraform.NodeValidatableResource
+    provider["localhost/dev/confdb"] - *terraform.NodeApplyableProvider
+  output.x (expand) - *terraform.nodeExpandOutput
+  output.y (expand) - *terraform.nodeExpandOutput
+  provider["localhost/dev/confdb"] - *terraform.NodeApplyableProvider
+  ------
+2025-11-06T22:38:30.795+0100 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2025-11-06T22:38:30.795+0100 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2025-11-06T22:38:30.795+0100 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2025-11-06T22:38:30.795+0100 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2025-11-06T22:38:30.795+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.795+0100 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["localhost/dev/confdb"]
+2025-11-06T22:38:30.795+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.795+0100 [TRACE] AttachSchemaTransformer: attaching resource schema to data.confdb_vnet.some_vnet
+2025-11-06T22:38:30.795+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.795+0100 [TRACE] AttachSchemaTransformer: attaching resource schema to data.confdb_default_vnet.default_vnet
+2025-11-06T22:38:30.795+0100 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2025-11-06T22:38:30.795+0100 [TRACE] Executing graph transform *terraform.ExternalReferenceTransformer
+2025-11-06T22:38:30.795+0100 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2025-11-06T22:38:30.795+0100 [DEBUG] ReferenceTransformer: "provider[\"localhost/dev/confdb\"]" references: []
+2025-11-06T22:38:30.795+0100 [DEBUG] ReferenceTransformer: "data.confdb_vnet.some_vnet" references: []
+2025-11-06T22:38:30.795+0100 [DEBUG] ReferenceTransformer: "data.confdb_default_vnet.default_vnet" references: []
+2025-11-06T22:38:30.795+0100 [DEBUG] ReferenceTransformer: "output.x (expand)" references: [data.confdb_vnet.some_vnet]
+2025-11-06T22:38:30.795+0100 [DEBUG] ReferenceTransformer: "output.y (expand)" references: [data.confdb_default_vnet.default_vnet]
+2025-11-06T22:38:30.795+0100 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2025-11-06T22:38:30.795+0100 [TRACE] AttachDependenciesTransformer: output.x (expand) depends on [data.confdb_vnet.some_vnet]
+2025-11-06T22:38:30.795+0100 [TRACE] AttachDependenciesTransformer: output.y (expand) depends on [data.confdb_default_vnet.default_vnet]
+2025-11-06T22:38:30.795+0100 [TRACE] Executing graph transform *terraform.attachDataResourceDependsOnTransformer
+2025-11-06T22:38:30.795+0100 [TRACE] attachDataDependenciesTransformer: data.confdb_vnet.some_vnet depends on []
+2025-11-06T22:38:30.795+0100 [TRACE] attachDataDependenciesTransformer: data.confdb_default_vnet.default_vnet depends on []
+2025-11-06T22:38:30.795+0100 [TRACE] Executing graph transform *terraform.DestroyEdgeTransformer
+2025-11-06T22:38:30.795+0100 [TRACE] Executing graph transform *terraform.pruneUnusedNodesTransformer
+2025-11-06T22:38:30.795+0100 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2025-11-06T22:38:30.795+0100 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2025-11-06T22:38:30.795+0100 [TRACE] ForcedCBDTransformer: "data.confdb_vnet.some_vnet" (*terraform.NodeValidatableResource) has no CBD descendant, so skipping
+2025-11-06T22:38:30.795+0100 [TRACE] ForcedCBDTransformer: "data.confdb_default_vnet.default_vnet" (*terraform.NodeValidatableResource) has no CBD descendant, so skipping
+2025-11-06T22:38:30.795+0100 [TRACE] Executing graph transform *terraform.ephemeralResourceCloseTransformer
+2025-11-06T22:38:30.795+0100 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2025-11-06T22:38:30.795+0100 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2025-11-06T22:38:30.795+0100 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2025-11-06T22:38:30.795+0100 [TRACE] Completed graph transform:
+data.confdb_default_vnet.default_vnet - *terraform.NodeValidatableResource
+  provider["localhost/dev/confdb"] - *terraform.NodeApplyableProvider
+data.confdb_vnet.some_vnet - *terraform.NodeValidatableResource
+  provider["localhost/dev/confdb"] - *terraform.NodeApplyableProvider
+output.x (expand) - *terraform.nodeExpandOutput
+  data.confdb_vnet.some_vnet - *terraform.NodeValidatableResource
+output.y (expand) - *terraform.nodeExpandOutput
+  data.confdb_default_vnet.default_vnet - *terraform.NodeValidatableResource
+provider["localhost/dev/confdb"] - *terraform.NodeApplyableProvider
+provider["localhost/dev/confdb"] (close) - *terraform.graphNodeCloseProvider
+  data.confdb_default_vnet.default_vnet - *terraform.NodeValidatableResource
+  data.confdb_vnet.some_vnet - *terraform.NodeValidatableResource
+root - *terraform.nodeCloseModule
+  output.x (expand) - *terraform.nodeExpandOutput
+  output.y (expand) - *terraform.nodeExpandOutput
+  provider["localhost/dev/confdb"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2025-11-06T22:38:30.795+0100 [DEBUG] Starting graph walk: walkValidate
+2025-11-06T22:38:30.795+0100 [TRACE] vertex "provider[\"localhost/dev/confdb\"]": starting visit (*terraform.NodeApplyableProvider)
+2025-11-06T22:38:30.795+0100 [TRACE] vertex "provider[\"localhost/dev/confdb\"]": belongs to
+2025-11-06T22:38:30.795+0100 [DEBUG] created provider logger: level=trace
+2025-11-06T22:38:30.795+0100 [INFO]  provider: configuring client automatic mTLS
+2025-11-06T22:38:30.797+0100 [DEBUG] provider: starting plugin: path=/home/fmn/go/bin/terraform-provider-confdb args=["/home/fmn/go/bin/terraform-provider-confdb"]
+2025-11-06T22:38:30.797+0100 [DEBUG] provider: plugin started: path=/home/fmn/go/bin/terraform-provider-confdb pid=1707745
+2025-11-06T22:38:30.797+0100 [DEBUG] provider: waiting for RPC address: plugin=/home/fmn/go/bin/terraform-provider-confdb
+2025-11-06T22:38:30.799+0100 [INFO]  provider.terraform-provider-confdb: configuring server automatic mTLS: timestamp="2025-11-06T22:38:30.799+0100"
+2025-11-06T22:38:30.805+0100 [DEBUG] provider.terraform-provider-confdb: plugin address: address=/tmp/plugin157692474 network=unix timestamp="2025-11-06T22:38:30.805+0100"
+2025-11-06T22:38:30.805+0100 [DEBUG] provider: using plugin: version=6
+2025-11-06T22:38:30.810+0100 [TRACE] BuiltinEvalContext: Initialized "provider[\"localhost/dev/confdb\"]" provider for provider["localhost/dev/confdb"]
+2025-11-06T22:38:30.810+0100 [TRACE] provider.stdio: waiting for stdio data
+2025-11-06T22:38:30.810+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.810+0100 [TRACE] NodeApplyableProvider: validating configuration for provider["localhost/dev/confdb"]
+2025-11-06T22:38:30.810+0100 [TRACE] buildProviderConfig for provider["localhost/dev/confdb"]: using explicit config only
+2025-11-06T22:38:30.810+0100 [TRACE] GRPCProvider.v6: returning cached schema: EXTRA_VALUE_AT_END=localhost/dev/confdb
+2025-11-06T22:38:30.810+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.810+0100 [TRACE] GRPCProvider.v6: ValidateProviderConfig
+2025-11-06T22:38:30.810+0100 [TRACE] GRPCProvider.v6: returning cached schema: EXTRA_VALUE_AT_END=localhost/dev/confdb
+2025-11-06T22:38:30.811+0100 [TRACE] provider.terraform-provider-confdb: Received request: @module=sdk.proto tf_provider_addr=localhost/dev/confdb tf_rpc=ValidateProviderConfig tf_proto_version=6.10 tf_req_id=f4768829-5454-2769-a56d-77c54f33947a @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/tf6server/server.go:625 timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.811+0100 [TRACE] provider.terraform-provider-confdb: Skipping protocol data file writing because no data directory is set. Use the TF_LOG_SDK_PROTO_DATA_DIR environment variable to enable this functionality.: @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/internal/logging/protocol_data.go:41 tf_proto_version=6.10 tf_provider_addr=localhost/dev/confdb @module=sdk.proto tf_req_id=f4768829-5454-2769-a56d-77c54f33947a tf_rpc=ValidateProviderConfig timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.811+0100 [TRACE] provider.terraform-provider-confdb: Sending request downstream: tf_proto_version=6.10 tf_rpc=ValidateProviderConfig @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/internal/tf6serverlogging/downstream_request.go:22 @module=sdk.proto tf_provider_addr=localhost/dev/confdb tf_req_id=f4768829-5454-2769-a56d-77c54f33947a timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.811+0100 [TRACE] provider.terraform-provider-confdb: Checking ProviderSchema lock: tf_rpc=ValidateProviderConfig @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:455 @module=sdk.framework tf_provider_addr=localhost/dev/confdb tf_req_id=f4768829-5454-2769-a56d-77c54f33947a timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.811+0100 [TRACE] provider.terraform-provider-confdb: Calling provider defined Provider Schema: @module=sdk.framework tf_provider_addr=localhost/dev/confdb tf_req_id=f4768829-5454-2769-a56d-77c54f33947a tf_rpc=ValidateProviderConfig @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:466 timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.811+0100 [TRACE] provider.terraform-provider-confdb: Called provider defined Provider Schema: @module=sdk.framework tf_provider_addr=localhost/dev/confdb tf_req_id=f4768829-5454-2769-a56d-77c54f33947a tf_rpc=ValidateProviderConfig @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:468 timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.811+0100 [TRACE] provider.terraform-provider-confdb: Received downstream response: diagnostic_warning_count=0 tf_proto_version=6.10 tf_req_id=f4768829-5454-2769-a56d-77c54f33947a @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/internal/tf6serverlogging/downstream_request.go:61 @module=sdk.proto diagnostic_error_count=0 tf_provider_addr=localhost/dev/confdb tf_req_duration_ms=0 tf_rpc=ValidateProviderConfig timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.811+0100 [TRACE] provider.terraform-provider-confdb: Served request: @module=sdk.proto tf_rpc=ValidateProviderConfig @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/tf6server/server.go:645 tf_proto_version=6.10 tf_provider_addr=localhost/dev/confdb tf_req_id=f4768829-5454-2769-a56d-77c54f33947a timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.811+0100 [TRACE] vertex "provider[\"localhost/dev/confdb\"]": visit complete
+2025-11-06T22:38:30.811+0100 [TRACE] vertex "data.confdb_vnet.some_vnet": starting visit (*terraform.NodeValidatableResource)
+2025-11-06T22:38:30.811+0100 [TRACE] vertex "data.confdb_default_vnet.default_vnet": starting visit (*terraform.NodeValidatableResource)
+2025-11-06T22:38:30.811+0100 [TRACE] vertex "data.confdb_vnet.some_vnet": belongs to
+2025-11-06T22:38:30.811+0100 [TRACE] vertex "data.confdb_default_vnet.default_vnet": belongs to
+2025-11-06T22:38:30.811+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.811+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.811+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.811+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.811+0100 [DEBUG] skipping FixUpBlockAttrs
+2025-11-06T22:38:30.811+0100 [DEBUG] skipping FixUpBlockAttrs
+2025-11-06T22:38:30.811+0100 [TRACE] GRPCProvider.v6: ValidateDataResourceConfig
+2025-11-06T22:38:30.811+0100 [TRACE] GRPCProvider.v6: ValidateDataResourceConfig
+2025-11-06T22:38:30.811+0100 [TRACE] GRPCProvider.v6: returning cached schema: EXTRA_VALUE_AT_END=localhost/dev/confdb
+2025-11-06T22:38:30.811+0100 [TRACE] GRPCProvider.v6: returning cached schema: EXTRA_VALUE_AT_END=localhost/dev/confdb
+2025-11-06T22:38:30.811+0100 [TRACE] provider.terraform-provider-confdb: Received request: @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/tf6server/server.go:696 @module=sdk.proto tf_proto_version=6.10 tf_rpc=ValidateDataResourceConfig tf_data_source_type=confdb_default_vnet tf_provider_addr=localhost/dev/confdb tf_req_id=d2917158-046a-a879-9ccd-bb7a3330c560 timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.811+0100 [TRACE] provider.terraform-provider-confdb: Sending request downstream: tf_provider_addr=localhost/dev/confdb tf_req_id=d2917158-046a-a879-9ccd-bb7a3330c560 @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/internal/tf6serverlogging/downstream_request.go:22 @module=sdk.proto tf_data_source_type=confdb_default_vnet tf_proto_version=6.10 tf_rpc=ValidateDataResourceConfig timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.811+0100 [TRACE] provider.terraform-provider-confdb: Checking DataSourceTypes lock: @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:276 @module=sdk.framework tf_provider_addr=localhost/dev/confdb tf_req_id=d2917158-046a-a879-9ccd-bb7a3330c560 tf_data_source_type=confdb_default_vnet tf_rpc=ValidateDataResourceConfig timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.811+0100 [TRACE] provider.terraform-provider-confdb: Checking ProviderTypeName lock: tf_provider_addr=localhost/dev/confdb tf_req_id=d2917158-046a-a879-9ccd-bb7a3330c560 tf_rpc=ValidateDataResourceConfig tf_data_source_type=confdb_default_vnet @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:432 @module=sdk.framework timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.811+0100 [TRACE] provider.terraform-provider-confdb: Calling provider defined Provider Metadata: tf_rpc=ValidateDataResourceConfig @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:443 @module=sdk.framework tf_req_id=d2917158-046a-a879-9ccd-bb7a3330c560 tf_data_source_type=confdb_default_vnet tf_provider_addr=localhost/dev/confdb timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.811+0100 [TRACE] provider.terraform-provider-confdb: Called provider defined Provider Metadata: tf_provider_addr=localhost/dev/confdb tf_req_id=d2917158-046a-a879-9ccd-bb7a3330c560 @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:445 tf_data_source_type=confdb_default_vnet tf_rpc=ValidateDataResourceConfig @module=sdk.framework timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.811+0100 [TRACE] provider.terraform-provider-confdb: Calling provider defined Provider DataSources: tf_rpc=ValidateDataResourceConfig @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:287 @module=sdk.framework tf_data_source_type=confdb_default_vnet tf_provider_addr=localhost/dev/confdb tf_req_id=d2917158-046a-a879-9ccd-bb7a3330c560 timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.811+0100 [TRACE] provider.terraform-provider-confdb: Called provider defined Provider DataSources: @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:289 @module=sdk.framework tf_data_source_type=confdb_default_vnet tf_rpc=ValidateDataResourceConfig tf_provider_addr=localhost/dev/confdb tf_req_id=d2917158-046a-a879-9ccd-bb7a3330c560 timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.811+0100 [TRACE] provider.terraform-provider-confdb: Received request: @module=sdk.proto tf_data_source_type=confdb_vnet tf_provider_addr=localhost/dev/confdb @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/tf6server/server.go:696 tf_proto_version=6.10 tf_req_id=80ea8a22-9e9d-28af-c247-dc4673d4cfee tf_rpc=ValidateDataResourceConfig timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.811+0100 [TRACE] provider.terraform-provider-confdb: Found data source type: @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:310 @module=sdk.framework tf_req_id=d2917158-046a-a879-9ccd-bb7a3330c560 tf_rpc=ValidateDataResourceConfig tf_data_source_type=confdb_vnet tf_provider_addr=localhost/dev/confdb timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.811+0100 [TRACE] provider.terraform-provider-confdb: Found data source type: tf_provider_addr=localhost/dev/confdb tf_rpc=ValidateDataResourceConfig @module=sdk.framework tf_data_source_type=confdb_default_vnet tf_req_id=d2917158-046a-a879-9ccd-bb7a3330c560 @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:310 timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.811+0100 [TRACE] provider.terraform-provider-confdb: Sending request downstream: tf_proto_version=6.10 tf_provider_addr=localhost/dev/confdb tf_req_id=80ea8a22-9e9d-28af-c247-dc4673d4cfee tf_rpc=ValidateDataResourceConfig @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/internal/tf6serverlogging/downstream_request.go:22 @module=sdk.proto tf_data_source_type=confdb_vnet timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.811+0100 [TRACE] provider.terraform-provider-confdb: Checking DataSourceTypes lock: tf_provider_addr=localhost/dev/confdb tf_rpc=ValidateDataResourceConfig @module=sdk.framework tf_data_source_type=confdb_default_vnet tf_req_id=d2917158-046a-a879-9ccd-bb7a3330c560 @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:276 timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.811+0100 [TRACE] provider.terraform-provider-confdb: Checking DataSourceTypes lock: tf_rpc=ValidateDataResourceConfig @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:276 @module=sdk.framework tf_req_id=80ea8a22-9e9d-28af-c247-dc4673d4cfee tf_data_source_type=confdb_vnet tf_provider_addr=localhost/dev/confdb timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.811+0100 [TRACE] provider.terraform-provider-confdb: Calling provider defined DataSource Schema method: @module=sdk.framework tf_data_source_type=confdb_default_vnet tf_rpc=ValidateDataResourceConfig tf_provider_addr=localhost/dev/confdb tf_req_id=d2917158-046a-a879-9ccd-bb7a3330c560 @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:368 timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.811+0100 [TRACE] provider.terraform-provider-confdb: Called provider defined DataSource Schema method: @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:370 tf_req_id=d2917158-046a-a879-9ccd-bb7a3330c560 tf_rpc=ValidateDataResourceConfig @module=sdk.framework tf_data_source_type=confdb_default_vnet tf_provider_addr=localhost/dev/confdb timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.812+0100 [TRACE] provider.terraform-provider-confdb: Checking DataSourceTypes lock: @module=sdk.framework @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:276 tf_data_source_type=confdb_vnet tf_provider_addr=localhost/dev/confdb tf_req_id=80ea8a22-9e9d-28af-c247-dc4673d4cfee tf_rpc=ValidateDataResourceConfig timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.812+0100 [TRACE] provider.terraform-provider-confdb: Calling provider defined DataSource Schema method: tf_data_source_type=confdb_vnet tf_rpc=ValidateDataResourceConfig tf_provider_addr=localhost/dev/confdb tf_req_id=80ea8a22-9e9d-28af-c247-dc4673d4cfee @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:368 @module=sdk.framework timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.812+0100 [TRACE] provider.terraform-provider-confdb: Called provider defined DataSource Schema method: @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:370 @module=sdk.framework tf_data_source_type=confdb_vnet tf_provider_addr=localhost/dev/confdb tf_req_id=80ea8a22-9e9d-28af-c247-dc4673d4cfee tf_rpc=ValidateDataResourceConfig timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.812+0100 [TRACE] provider.terraform-provider-confdb: Received downstream response: diagnostic_error_count=0 tf_req_id=d2917158-046a-a879-9ccd-bb7a3330c560 @module=sdk.proto diagnostic_warning_count=0 tf_data_source_type=confdb_default_vnet tf_proto_version=6.10 tf_provider_addr=localhost/dev/confdb tf_req_duration_ms=0 tf_rpc=ValidateDataResourceConfig @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/internal/tf6serverlogging/downstream_request.go:61 timestamp="2025-11-06T22:38:30.811+0100"
+2025-11-06T22:38:30.812+0100 [TRACE] provider.terraform-provider-confdb: Served request: @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/tf6server/server.go:716 @module=sdk.proto tf_proto_version=6.10 tf_data_source_type=confdb_default_vnet tf_provider_addr=localhost/dev/confdb tf_req_id=d2917158-046a-a879-9ccd-bb7a3330c560 tf_rpc=ValidateDataResourceConfig timestamp="2025-11-06T22:38:30.812+0100"
+2025-11-06T22:38:30.812+0100 [TRACE] provider.terraform-provider-confdb: Received downstream response: @module=sdk.proto tf_proto_version=6.10 tf_req_id=80ea8a22-9e9d-28af-c247-dc4673d4cfee tf_rpc=ValidateDataResourceConfig @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/internal/tf6serverlogging/downstream_request.go:61 diagnostic_error_count=0 diagnostic_warning_count=0 tf_data_source_type=confdb_vnet tf_provider_addr=localhost/dev/confdb tf_req_duration_ms=0 timestamp="2025-11-06T22:38:30.812+0100"
+2025-11-06T22:38:30.812+0100 [TRACE] provider.terraform-provider-confdb: Served request: tf_rpc=ValidateDataResourceConfig tf_req_id=80ea8a22-9e9d-28af-c247-dc4673d4cfee @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/tf6server/server.go:716 @module=sdk.proto tf_data_source_type=confdb_vnet tf_proto_version=6.10 tf_provider_addr=localhost/dev/confdb timestamp="2025-11-06T22:38:30.812+0100"
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "data.confdb_vnet.some_vnet": visit complete
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "output.x (expand)": starting visit (*terraform.nodeExpandOutput)
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "output.x (expand)": does not belong to any module instance
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "output.x (expand)": expanding dynamic subgraph
+2025-11-06T22:38:30.812+0100 [TRACE] Expanding output: adding output.x as *terraform.NodeApplyableOutput
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "output.x (expand)": entering dynamic subgraph
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "data.confdb_default_vnet.default_vnet": visit complete
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "output.x": starting visit (*terraform.NodeApplyableOutput)
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "output.y (expand)": starting visit (*terraform.nodeExpandOutput)
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "output.x": belongs to
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "output.y (expand)": does not belong to any module instance
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "output.y (expand)": expanding dynamic subgraph
+2025-11-06T22:38:30.812+0100 [TRACE] Expanding output: adding output.y as *terraform.NodeApplyableOutput
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "provider[\"localhost/dev/confdb\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2025-11-06T22:38:30.812+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "provider[\"localhost/dev/confdb\"] (close)": does not belong to any module instance
+2025-11-06T22:38:30.812+0100 [TRACE] GRPCProvider.v6: Close
+2025-11-06T22:38:30.812+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.812+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "output.y (expand)": entering dynamic subgraph
+2025-11-06T22:38:30.812+0100 [TRACE] setValue: Saving Create change for output.x in changeset
+2025-11-06T22:38:30.812+0100 [TRACE] setValue: Saving value for output.x in state
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "output.x": visit complete
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "output.y": starting visit (*terraform.NodeApplyableOutput)
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "output.y": belongs to
+2025-11-06T22:38:30.812+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.812+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.812+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.812+0100 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2025-11-06T22:38:30.812+0100 [TRACE] setValue: Saving Create change for output.y in changeset
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2025-11-06T22:38:30.812+0100 [TRACE] setValue: Saving value for output.y in state
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "output.y": visit complete
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "root": does not belong to any module instance
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "root": visit complete
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "output.x (expand)": dynamic subgraph completed successfully
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "output.x (expand)": visit complete
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "root": does not belong to any module instance
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "root": visit complete
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "output.y (expand)": dynamic subgraph completed successfully
+2025-11-06T22:38:30.812+0100 [TRACE] vertex "output.y (expand)": visit complete
+2025-11-06T22:38:30.812+0100 [INFO]  provider: plugin process exited: plugin=/home/fmn/go/bin/terraform-provider-confdb id=1707745
+2025-11-06T22:38:30.818+0100 [DEBUG] provider: plugin exited
+2025-11-06T22:38:30.818+0100 [TRACE] vertex "provider[\"localhost/dev/confdb\"] (close)": visit complete
+2025-11-06T22:38:30.818+0100 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2025-11-06T22:38:30.818+0100 [TRACE] vertex "root": does not belong to any module instance
+2025-11-06T22:38:30.818+0100 [TRACE] vertex "root": visit complete
+2025-11-06T22:38:30.818+0100 [INFO]  backend/local: plan calling Plan
+2025-11-06T22:38:30.818+0100 [DEBUG] Building and walking plan graph for NormalMode
+2025-11-06T22:38:30.818+0100 [TRACE] building graph for walkPlan
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] ConfigTransformer: Starting for path:
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.variableValidationTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] variableValidationTransformer: adding validation nodes for any existing variable evaluation nodes
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.LocalTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.OutputTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] OutputTransformer: adding y as *terraform.nodeExpandOutput
+2025-11-06T22:38:30.818+0100 [TRACE] OutputTransformer: adding x as *terraform.nodeExpandOutput
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.checkTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.StateTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] StateTransformer: creating nodes for deposed instance objects only
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] AttachResourceConfigTransformer: attaching to "data.confdb_default_vnet.default_vnet (expand)" (*terraform.nodeExpandPlannableResource) config from hcl.Range{Filename:"main.tf", Start:hcl.Pos{Line:16, Column:1, Byte:241}, End:hcl.Pos{Line:16, Column:42, Byte:282}}
+2025-11-06T22:38:30.818+0100 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.confdb_default_vnet.default_vnet (expand)
+2025-11-06T22:38:30.818+0100 [TRACE] AttachResourceConfigTransformer: attaching to "data.confdb_vnet.some_vnet (expand)" (*terraform.nodeExpandPlannableResource) config from hcl.Range{Filename:"main.tf", Start:hcl.Pos{Line:15, Column:1, Byte:207}, End:hcl.Pos{Line:15, Column:31, Byte:237}}
+2025-11-06T22:38:30.818+0100 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.confdb_vnet.some_vnet (expand)
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2025-11-06T22:38:30.818+0100 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.externalProviderTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.externalProviderTransformer with new graph:
+  data.confdb_default_vnet.default_vnet (expand) - *terraform.nodeExpandPlannableResource
+  data.confdb_vnet.some_vnet (expand) - *terraform.nodeExpandPlannableResource
+  output.x (expand) - *terraform.nodeExpandOutput
+  output.y (expand) - *terraform.nodeExpandOutput
+  ------
+2025-11-06T22:38:30.818+0100 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] ProviderConfigTransformer: attaching to "provider[\"localhost/dev/confdb\"]" provider configuration from main.tf:9,1-18
+2025-11-06T22:38:30.818+0100 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  data.confdb_default_vnet.default_vnet (expand) - *terraform.nodeExpandPlannableResource
+  data.confdb_vnet.some_vnet (expand) - *terraform.nodeExpandPlannableResource
+  output.x (expand) - *terraform.nodeExpandOutput
+  output.y (expand) - *terraform.nodeExpandOutput
+  provider["localhost/dev/confdb"] - *terraform.NodeApplyableProvider
+  ------
+2025-11-06T22:38:30.818+0100 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2025-11-06T22:38:30.818+0100 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] ProviderTransformer: exact match for provider["localhost/dev/confdb"] serving data.confdb_vnet.some_vnet (expand)
+2025-11-06T22:38:30.818+0100 [DEBUG] ProviderTransformer: "data.confdb_vnet.some_vnet (expand)" (*terraform.nodeExpandPlannableResource) needs provider["localhost/dev/confdb"]
+2025-11-06T22:38:30.818+0100 [TRACE] ProviderTransformer: exact match for provider["localhost/dev/confdb"] serving data.confdb_default_vnet.default_vnet (expand)
+2025-11-06T22:38:30.818+0100 [DEBUG] ProviderTransformer: "data.confdb_default_vnet.default_vnet (expand)" (*terraform.nodeExpandPlannableResource) needs provider["localhost/dev/confdb"]
+2025-11-06T22:38:30.818+0100 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  data.confdb_default_vnet.default_vnet (expand) - *terraform.nodeExpandPlannableResource
+    provider["localhost/dev/confdb"] - *terraform.NodeApplyableProvider
+  data.confdb_vnet.some_vnet (expand) - *terraform.nodeExpandPlannableResource
+    provider["localhost/dev/confdb"] - *terraform.NodeApplyableProvider
+  output.x (expand) - *terraform.nodeExpandOutput
+  output.y (expand) - *terraform.nodeExpandOutput
+  provider["localhost/dev/confdb"] - *terraform.NodeApplyableProvider
+  ------
+2025-11-06T22:38:30.818+0100 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.818+0100 [TRACE] AttachSchemaTransformer: attaching resource schema to data.confdb_default_vnet.default_vnet (expand)
+2025-11-06T22:38:30.818+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.818+0100 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["localhost/dev/confdb"]
+2025-11-06T22:38:30.818+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.818+0100 [TRACE] AttachSchemaTransformer: attaching resource schema to data.confdb_vnet.some_vnet (expand)
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.ExternalReferenceTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2025-11-06T22:38:30.818+0100 [DEBUG] ReferenceTransformer: "data.confdb_default_vnet.default_vnet (expand)" references: []
+2025-11-06T22:38:30.818+0100 [DEBUG] ReferenceTransformer: "output.y (expand)" references: [data.confdb_default_vnet.default_vnet (expand)]
+2025-11-06T22:38:30.818+0100 [DEBUG] ReferenceTransformer: "output.x (expand)" references: [data.confdb_vnet.some_vnet (expand)]
+2025-11-06T22:38:30.818+0100 [DEBUG] ReferenceTransformer: "provider[\"localhost/dev/confdb\"]" references: []
+2025-11-06T22:38:30.818+0100 [DEBUG] ReferenceTransformer: "data.confdb_vnet.some_vnet (expand)" references: []
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] AttachDependenciesTransformer: data.confdb_vnet.some_vnet (expand) depends on []
+2025-11-06T22:38:30.818+0100 [TRACE] AttachDependenciesTransformer: data.confdb_default_vnet.default_vnet (expand) depends on []
+2025-11-06T22:38:30.818+0100 [TRACE] AttachDependenciesTransformer: output.y (expand) depends on [data.confdb_default_vnet.default_vnet]
+2025-11-06T22:38:30.818+0100 [TRACE] AttachDependenciesTransformer: output.x (expand) depends on [data.confdb_vnet.some_vnet]
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.attachDataResourceDependsOnTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] attachDataDependenciesTransformer: data.confdb_default_vnet.default_vnet depends on []
+2025-11-06T22:38:30.818+0100 [TRACE] attachDataDependenciesTransformer: data.confdb_vnet.some_vnet depends on []
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.DestroyEdgeTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.pruneUnusedNodesTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] ForcedCBDTransformer: "data.confdb_vnet.some_vnet (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendant, so skipping
+2025-11-06T22:38:30.818+0100 [TRACE] ForcedCBDTransformer: "data.confdb_default_vnet.default_vnet (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendant, so skipping
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.ephemeralResourceCloseTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2025-11-06T22:38:30.818+0100 [TRACE] Completed graph transform:
+data.confdb_default_vnet.default_vnet (expand) - *terraform.nodeExpandPlannableResource
+  provider["localhost/dev/confdb"] - *terraform.NodeApplyableProvider
+data.confdb_vnet.some_vnet (expand) - *terraform.nodeExpandPlannableResource
+  provider["localhost/dev/confdb"] - *terraform.NodeApplyableProvider
+output.x (expand) - *terraform.nodeExpandOutput
+  data.confdb_vnet.some_vnet (expand) - *terraform.nodeExpandPlannableResource
+output.y (expand) - *terraform.nodeExpandOutput
+  data.confdb_default_vnet.default_vnet (expand) - *terraform.nodeExpandPlannableResource
+provider["localhost/dev/confdb"] - *terraform.NodeApplyableProvider
+provider["localhost/dev/confdb"] (close) - *terraform.graphNodeCloseProvider
+  data.confdb_default_vnet.default_vnet (expand) - *terraform.nodeExpandPlannableResource
+  data.confdb_vnet.some_vnet (expand) - *terraform.nodeExpandPlannableResource
+root - *terraform.nodeCloseModule
+  output.x (expand) - *terraform.nodeExpandOutput
+  output.y (expand) - *terraform.nodeExpandOutput
+  provider["localhost/dev/confdb"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2025-11-06T22:38:30.818+0100 [DEBUG] Starting graph walk: walkPlan
+2025-11-06T22:38:30.818+0100 [TRACE] vertex "provider[\"localhost/dev/confdb\"]": starting visit (*terraform.NodeApplyableProvider)
+2025-11-06T22:38:30.818+0100 [TRACE] vertex "provider[\"localhost/dev/confdb\"]": belongs to
+2025-11-06T22:38:30.818+0100 [DEBUG] created provider logger: level=trace
+2025-11-06T22:38:30.818+0100 [INFO]  provider: configuring client automatic mTLS
+2025-11-06T22:38:30.820+0100 [DEBUG] provider: starting plugin: path=/home/fmn/go/bin/terraform-provider-confdb args=["/home/fmn/go/bin/terraform-provider-confdb"]
+2025-11-06T22:38:30.821+0100 [DEBUG] provider: plugin started: path=/home/fmn/go/bin/terraform-provider-confdb pid=1707759
+2025-11-06T22:38:30.821+0100 [DEBUG] provider: waiting for RPC address: plugin=/home/fmn/go/bin/terraform-provider-confdb
+2025-11-06T22:38:30.823+0100 [INFO]  provider.terraform-provider-confdb: configuring server automatic mTLS: timestamp="2025-11-06T22:38:30.823+0100"
+2025-11-06T22:38:30.829+0100 [DEBUG] provider.terraform-provider-confdb: plugin address: address=/tmp/plugin2282099383 network=unix timestamp="2025-11-06T22:38:30.829+0100"
+2025-11-06T22:38:30.829+0100 [DEBUG] provider: using plugin: version=6
+2025-11-06T22:38:30.835+0100 [TRACE] BuiltinEvalContext: Initialized "provider[\"localhost/dev/confdb\"]" provider for provider["localhost/dev/confdb"]
+2025-11-06T22:38:30.835+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.835+0100 [TRACE] NodeApplyableProvider: configuring provider["localhost/dev/confdb"]
+2025-11-06T22:38:30.835+0100 [TRACE] buildProviderConfig for provider["localhost/dev/confdb"]: using explicit config only
+2025-11-06T22:38:30.835+0100 [TRACE] GRPCProvider.v6: returning cached schema: EXTRA_VALUE_AT_END=localhost/dev/confdb
+2025-11-06T22:38:30.835+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.835+0100 [TRACE] provider.stdio: waiting for stdio data
+2025-11-06T22:38:30.835+0100 [TRACE] GRPCProvider.v6: ValidateProviderConfig
+2025-11-06T22:38:30.835+0100 [TRACE] GRPCProvider.v6: returning cached schema: EXTRA_VALUE_AT_END=localhost/dev/confdb
+2025-11-06T22:38:30.835+0100 [TRACE] provider.terraform-provider-confdb: Received request: tf_rpc=ValidateProviderConfig @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/tf6server/server.go:625 @module=sdk.proto tf_provider_addr=localhost/dev/confdb tf_req_id=5c85aa6d-7660-c4c5-9443-82a838bf16b6 tf_proto_version=6.10 timestamp="2025-11-06T22:38:30.835+0100"
+2025-11-06T22:38:30.835+0100 [TRACE] provider.terraform-provider-confdb: Skipping protocol data file writing because no data directory is set. Use the TF_LOG_SDK_PROTO_DATA_DIR environment variable to enable this functionality.: @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/internal/logging/protocol_data.go:41 @module=sdk.proto tf_rpc=ValidateProviderConfig tf_proto_version=6.10 tf_provider_addr=localhost/dev/confdb tf_req_id=5c85aa6d-7660-c4c5-9443-82a838bf16b6 timestamp="2025-11-06T22:38:30.835+0100"
+2025-11-06T22:38:30.835+0100 [TRACE] provider.terraform-provider-confdb: Sending request downstream: tf_proto_version=6.10 tf_provider_addr=localhost/dev/confdb tf_req_id=5c85aa6d-7660-c4c5-9443-82a838bf16b6 @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/internal/tf6serverlogging/downstream_request.go:22 @module=sdk.proto tf_rpc=ValidateProviderConfig timestamp="2025-11-06T22:38:30.835+0100"
+2025-11-06T22:38:30.835+0100 [TRACE] provider.terraform-provider-confdb: Checking ProviderSchema lock: tf_rpc=ValidateProviderConfig @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:455 @module=sdk.framework tf_provider_addr=localhost/dev/confdb tf_req_id=5c85aa6d-7660-c4c5-9443-82a838bf16b6 timestamp="2025-11-06T22:38:30.835+0100"
+2025-11-06T22:38:30.835+0100 [TRACE] provider.terraform-provider-confdb: Calling provider defined Provider Schema: @module=sdk.framework tf_provider_addr=localhost/dev/confdb tf_req_id=5c85aa6d-7660-c4c5-9443-82a838bf16b6 tf_rpc=ValidateProviderConfig @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:466 timestamp="2025-11-06T22:38:30.835+0100"
+2025-11-06T22:38:30.835+0100 [TRACE] provider.terraform-provider-confdb: Called provider defined Provider Schema: tf_provider_addr=localhost/dev/confdb tf_req_id=5c85aa6d-7660-c4c5-9443-82a838bf16b6 tf_rpc=ValidateProviderConfig @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:468 @module=sdk.framework timestamp="2025-11-06T22:38:30.835+0100"
+2025-11-06T22:38:30.835+0100 [TRACE] provider.terraform-provider-confdb: Received downstream response: @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/internal/tf6serverlogging/downstream_request.go:61 @module=sdk.proto diagnostic_error_count=0 diagnostic_warning_count=0 tf_proto_version=6.10 tf_provider_addr=localhost/dev/confdb tf_req_duration_ms=0 tf_req_id=5c85aa6d-7660-c4c5-9443-82a838bf16b6 tf_rpc=ValidateProviderConfig timestamp="2025-11-06T22:38:30.835+0100"
+2025-11-06T22:38:30.835+0100 [TRACE] provider.terraform-provider-confdb: Served request: @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/tf6server/server.go:645 @module=sdk.proto tf_proto_version=6.10 tf_req_id=5c85aa6d-7660-c4c5-9443-82a838bf16b6 tf_rpc=ValidateProviderConfig tf_provider_addr=localhost/dev/confdb timestamp="2025-11-06T22:38:30.835+0100"
+2025-11-06T22:38:30.835+0100 [TRACE] GRPCProvider.v6: ConfigureProvider
+2025-11-06T22:38:30.835+0100 [TRACE] GRPCProvider.v6: returning cached schema: EXTRA_VALUE_AT_END=localhost/dev/confdb
+2025-11-06T22:38:30.836+0100 [TRACE] provider.terraform-provider-confdb: Received request: tf_proto_version=6.10 @module=sdk.proto tf_provider_addr=localhost/dev/confdb tf_req_id=e37f84c3-8f20-2d2c-fda3-ff1beca6465e tf_rpc=ConfigureProvider @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/tf6server/server.go:597 timestamp="2025-11-06T22:38:30.835+0100"
+2025-11-06T22:38:30.836+0100 [TRACE] provider.terraform-provider-confdb: Announced client capabilities: tf_provider_addr=localhost/dev/confdb tf_req_id=e37f84c3-8f20-2d2c-fda3-ff1beca6465e @module=sdk.proto tf_client_capability_deferral_allowed=false tf_rpc=ConfigureProvider @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/internal/tf6serverlogging/client_capabilities.go:38 tf_proto_version=6.10 timestamp="2025-11-06T22:38:30.836+0100"
+2025-11-06T22:38:30.836+0100 [TRACE] provider.terraform-provider-confdb: Sending request downstream: @module=sdk.proto tf_proto_version=6.10 tf_provider_addr=localhost/dev/confdb tf_req_id=e37f84c3-8f20-2d2c-fda3-ff1beca6465e tf_rpc=ConfigureProvider @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/internal/tf6serverlogging/downstream_request.go:22 timestamp="2025-11-06T22:38:30.836+0100"
+2025-11-06T22:38:30.836+0100 [TRACE] provider.terraform-provider-confdb: Checking ProviderSchema lock: tf_provider_addr=localhost/dev/confdb tf_req_id=e37f84c3-8f20-2d2c-fda3-ff1beca6465e tf_rpc=ConfigureProvider @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:455 @module=sdk.framework timestamp="2025-11-06T22:38:30.836+0100"
+2025-11-06T22:38:30.836+0100 [TRACE] provider.terraform-provider-confdb: Calling provider defined Provider Configure: tf_provider_addr=localhost/dev/confdb tf_req_id=e37f84c3-8f20-2d2c-fda3-ff1beca6465e tf_rpc=ConfigureProvider @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server_configureprovider.go:15 @module=sdk.framework timestamp="2025-11-06T22:38:30.836+0100"
+2025-11-06T22:38:30.836+0100 [TRACE] provider.terraform-provider-confdb: Called provider defined Provider Configure: @module=sdk.framework tf_provider_addr=localhost/dev/confdb tf_req_id=e37f84c3-8f20-2d2c-fda3-ff1beca6465e tf_rpc=ConfigureProvider @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server_configureprovider.go:23 timestamp="2025-11-06T22:38:30.836+0100"
+2025-11-06T22:38:30.836+0100 [TRACE] provider.terraform-provider-confdb: Received downstream response: diagnostic_error_count=0 tf_proto_version=6.10 tf_req_id=e37f84c3-8f20-2d2c-fda3-ff1beca6465e diagnostic_warning_count=0 tf_provider_addr=localhost/dev/confdb tf_req_duration_ms=0 tf_rpc=ConfigureProvider @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/internal/tf6serverlogging/downstream_request.go:61 @module=sdk.proto timestamp="2025-11-06T22:38:30.836+0100"
+2025-11-06T22:38:30.836+0100 [TRACE] provider.terraform-provider-confdb: Served request: tf_proto_version=6.10 tf_req_id=e37f84c3-8f20-2d2c-fda3-ff1beca6465e tf_rpc=ConfigureProvider tf_provider_addr=localhost/dev/confdb @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/tf6server/server.go:618 @module=sdk.proto timestamp="2025-11-06T22:38:30.836+0100"
+2025-11-06T22:38:30.836+0100 [TRACE] vertex "provider[\"localhost/dev/confdb\"]": visit complete
+2025-11-06T22:38:30.836+0100 [TRACE] vertex "data.confdb_default_vnet.default_vnet (expand)": starting visit (*terraform.nodeExpandPlannableResource)
+2025-11-06T22:38:30.836+0100 [TRACE] vertex "data.confdb_vnet.some_vnet (expand)": starting visit (*terraform.nodeExpandPlannableResource)
+2025-11-06T22:38:30.836+0100 [TRACE] vertex "data.confdb_default_vnet.default_vnet (expand)": does not belong to any module instance
+2025-11-06T22:38:30.836+0100 [TRACE] vertex "data.confdb_vnet.some_vnet (expand)": does not belong to any module instance
+2025-11-06T22:38:30.836+0100 [TRACE] vertex "data.confdb_default_vnet.default_vnet (expand)": expanding dynamic subgraph
+2025-11-06T22:38:30.836+0100 [TRACE] vertex "data.confdb_vnet.some_vnet (expand)": expanding dynamic subgraph
+2025-11-06T22:38:30.836+0100 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2025-11-06T22:38:30.836+0100 [TRACE] ResourceCountTransformer: adding data.confdb_default_vnet.default_vnet as *terraform.NodePlannableResourceInstance
+2025-11-06T22:38:30.836+0100 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2025-11-06T22:38:30.836+0100 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2025-11-06T22:38:30.836+0100 [DEBUG] Resource instance state not found for node "data.confdb_default_vnet.default_vnet", instance data.confdb_default_vnet.default_vnet
+2025-11-06T22:38:30.836+0100 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2025-11-06T22:38:30.836+0100 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2025-11-06T22:38:30.836+0100 [DEBUG] ReferenceTransformer: "data.confdb_default_vnet.default_vnet" references: []
+2025-11-06T22:38:30.836+0100 [TRACE] Executing graph transform *terraform.RootTransformer
+2025-11-06T22:38:30.836+0100 [TRACE] Completed graph transform:
+data.confdb_default_vnet.default_vnet - *terraform.NodePlannableResourceInstance
+root - terraform.graphNodeRoot
+  data.confdb_default_vnet.default_vnet - *terraform.NodePlannableResourceInstance
+  ------
+2025-11-06T22:38:30.836+0100 [TRACE] vertex "data.confdb_default_vnet.default_vnet (expand)": entering dynamic subgraph
+2025-11-06T22:38:30.836+0100 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2025-11-06T22:38:30.836+0100 [TRACE] ResourceCountTransformer: adding data.confdb_vnet.some_vnet as *terraform.NodePlannableResourceInstance
+2025-11-06T22:38:30.836+0100 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2025-11-06T22:38:30.836+0100 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2025-11-06T22:38:30.836+0100 [DEBUG] Resource instance state not found for node "data.confdb_vnet.some_vnet", instance data.confdb_vnet.some_vnet
+2025-11-06T22:38:30.836+0100 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2025-11-06T22:38:30.836+0100 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2025-11-06T22:38:30.836+0100 [DEBUG] ReferenceTransformer: "data.confdb_vnet.some_vnet" references: []
+2025-11-06T22:38:30.836+0100 [TRACE] Executing graph transform *terraform.RootTransformer
+2025-11-06T22:38:30.836+0100 [TRACE] Completed graph transform:
+data.confdb_vnet.some_vnet - *terraform.NodePlannableResourceInstance
+root - terraform.graphNodeRoot
+  data.confdb_vnet.some_vnet - *terraform.NodePlannableResourceInstance
+  ------
+2025-11-06T22:38:30.836+0100 [TRACE] vertex "data.confdb_vnet.some_vnet (expand)": entering dynamic subgraph
+2025-11-06T22:38:30.836+0100 [TRACE] vertex "data.confdb_default_vnet.default_vnet": starting visit (*terraform.NodePlannableResourceInstance)
+2025-11-06T22:38:30.836+0100 [TRACE] vertex "data.confdb_vnet.some_vnet": starting visit (*terraform.NodePlannableResourceInstance)
+2025-11-06T22:38:30.836+0100 [TRACE] vertex "data.confdb_default_vnet.default_vnet": belongs to
+2025-11-06T22:38:30.836+0100 [TRACE] vertex "data.confdb_vnet.some_vnet": belongs to
+2025-11-06T22:38:30.836+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.836+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.836+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.836+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.836+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.836+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.836+0100 [DEBUG] skipping FixUpBlockAttrs
+2025-11-06T22:38:30.836+0100 [DEBUG] skipping FixUpBlockAttrs
+2025-11-06T22:38:30.836+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.836+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.836+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.836+0100 [TRACE] readDataSource: Re-validating config for data.confdb_vnet.some_vnet
+2025-11-06T22:38:30.836+0100 [TRACE] GRPCProvider.v6: ValidateDataResourceConfig
+2025-11-06T22:38:30.836+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.836+0100 [TRACE] GRPCProvider.v6: returning cached schema: EXTRA_VALUE_AT_END=localhost/dev/confdb
+2025-11-06T22:38:30.836+0100 [TRACE] readDataSource: Re-validating config for data.confdb_default_vnet.default_vnet
+2025-11-06T22:38:30.836+0100 [TRACE] GRPCProvider.v6: ValidateDataResourceConfig
+2025-11-06T22:38:30.836+0100 [TRACE] GRPCProvider.v6: returning cached schema: EXTRA_VALUE_AT_END=localhost/dev/confdb
+2025-11-06T22:38:30.837+0100 [TRACE] provider.terraform-provider-confdb: Received request: @module=sdk.proto tf_proto_version=6.10 tf_req_id=d0b89062-2bd2-c59d-efd6-5075e1fe6670 tf_data_source_type=confdb_default_vnet tf_provider_addr=localhost/dev/confdb tf_rpc=ValidateDataResourceConfig @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/tf6server/server.go:696 timestamp="2025-11-06T22:38:30.836+0100"
+2025-11-06T22:38:30.837+0100 [TRACE] provider.terraform-provider-confdb: Sending request downstream: tf_provider_addr=localhost/dev/confdb tf_req_id=d0b89062-2bd2-c59d-efd6-5075e1fe6670 tf_rpc=ValidateDataResourceConfig @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/internal/tf6serverlogging/downstream_request.go:22 @module=sdk.proto tf_data_source_type=confdb_default_vnet tf_proto_version=6.10 timestamp="2025-11-06T22:38:30.837+0100"
+2025-11-06T22:38:30.837+0100 [TRACE] provider.terraform-provider-confdb: Checking DataSourceTypes lock: @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:276 tf_data_source_type=confdb_default_vnet tf_rpc=ValidateDataResourceConfig @module=sdk.framework tf_provider_addr=localhost/dev/confdb tf_req_id=d0b89062-2bd2-c59d-efd6-5075e1fe6670 timestamp="2025-11-06T22:38:30.837+0100"
+2025-11-06T22:38:30.837+0100 [TRACE] provider.terraform-provider-confdb: Checking ProviderTypeName lock: tf_data_source_type=confdb_default_vnet tf_provider_addr=localhost/dev/confdb @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:432 tf_req_id=d0b89062-2bd2-c59d-efd6-5075e1fe6670 tf_rpc=ValidateDataResourceConfig @module=sdk.framework timestamp="2025-11-06T22:38:30.837+0100"
+2025-11-06T22:38:30.837+0100 [TRACE] provider.terraform-provider-confdb: Calling provider defined Provider Metadata: @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:443 @module=sdk.framework tf_data_source_type=confdb_default_vnet tf_provider_addr=localhost/dev/confdb tf_req_id=d0b89062-2bd2-c59d-efd6-5075e1fe6670 tf_rpc=ValidateDataResourceConfig timestamp="2025-11-06T22:38:30.837+0100"
+2025-11-06T22:38:30.837+0100 [TRACE] provider.terraform-provider-confdb: Called provider defined Provider Metadata: @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:445 tf_data_source_type=confdb_default_vnet tf_req_id=d0b89062-2bd2-c59d-efd6-5075e1fe6670 tf_rpc=ValidateDataResourceConfig @module=sdk.framework tf_provider_addr=localhost/dev/confdb timestamp="2025-11-06T22:38:30.837+0100"
+2025-11-06T22:38:30.837+0100 [TRACE] provider.terraform-provider-confdb: Calling provider defined Provider DataSources: @module=sdk.framework tf_req_id=d0b89062-2bd2-c59d-efd6-5075e1fe6670 @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:287 tf_data_source_type=confdb_default_vnet tf_provider_addr=localhost/dev/confdb tf_rpc=ValidateDataResourceConfig timestamp="2025-11-06T22:38:30.837+0100"
+2025-11-06T22:38:30.837+0100 [TRACE] provider.terraform-provider-confdb: Called provider defined Provider DataSources: @module=sdk.framework tf_req_id=d0b89062-2bd2-c59d-efd6-5075e1fe6670 tf_rpc=ValidateDataResourceConfig @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:289 tf_data_source_type=confdb_default_vnet tf_provider_addr=localhost/dev/confdb timestamp="2025-11-06T22:38:30.837+0100"
+2025-11-06T22:38:30.837+0100 [TRACE] provider.terraform-provider-confdb: Found data source type: @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:310 @module=sdk.framework tf_provider_addr=localhost/dev/confdb tf_data_source_type=confdb_vnet tf_req_id=d0b89062-2bd2-c59d-efd6-5075e1fe6670 tf_rpc=ValidateDataResourceConfig timestamp="2025-11-06T22:38:30.837+0100"
+2025-11-06T22:38:30.837+0100 [TRACE] provider.terraform-provider-confdb: Found data source type: @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:310 tf_data_source_type=confdb_default_vnet tf_provider_addr=localhost/dev/confdb tf_req_id=d0b89062-2bd2-c59d-efd6-5075e1fe6670 tf_rpc=ValidateDataResourceConfig @module=sdk.framework timestamp="2025-11-06T22:38:30.837+0100"
+2025-11-06T22:38:30.837+0100 [TRACE] provider.terraform-provider-confdb: Received request: tf_rpc=ValidateDataResourceConfig tf_data_source_type=confdb_vnet tf_proto_version=6.10 tf_req_id=ca8943db-2e79-1f8f-f368-3b4859a34b85 @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/tf6server/server.go:696 @module=sdk.proto tf_provider_addr=localhost/dev/confdb timestamp="2025-11-06T22:38:30.836+0100"
+2025-11-06T22:38:30.837+0100 [TRACE] provider.terraform-provider-confdb: Checking DataSourceTypes lock: tf_data_source_type=confdb_default_vnet tf_provider_addr=localhost/dev/confdb tf_rpc=ValidateDataResourceConfig @module=sdk.framework tf_req_id=d0b89062-2bd2-c59d-efd6-5075e1fe6670 @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:276 timestamp="2025-11-06T22:38:30.837+0100"
+2025-11-06T22:38:30.837+0100 [TRACE] provider.terraform-provider-confdb: Sending request downstream: @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/internal/tf6serverlogging/downstream_request.go:22 tf_data_source_type=confdb_vnet tf_req_id=ca8943db-2e79-1f8f-f368-3b4859a34b85 tf_rpc=ValidateDataResourceConfig @module=sdk.proto tf_proto_version=6.10 tf_provider_addr=localhost/dev/confdb timestamp="2025-11-06T22:38:30.837+0100"
+2025-11-06T22:38:30.837+0100 [TRACE] provider.terraform-provider-confdb: Checking DataSourceTypes lock: @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:276 @module=sdk.framework tf_data_source_type=confdb_vnet tf_provider_addr=localhost/dev/confdb tf_req_id=ca8943db-2e79-1f8f-f368-3b4859a34b85 tf_rpc=ValidateDataResourceConfig timestamp="2025-11-06T22:38:30.837+0100"
+2025-11-06T22:38:30.837+0100 [TRACE] provider.terraform-provider-confdb: Checking DataSourceTypes lock: tf_provider_addr=localhost/dev/confdb tf_req_id=ca8943db-2e79-1f8f-f368-3b4859a34b85 tf_rpc=ValidateDataResourceConfig @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:276 @module=sdk.framework tf_data_source_type=confdb_vnet timestamp="2025-11-06T22:38:30.837+0100"
+2025-11-06T22:38:30.837+0100 [TRACE] provider.terraform-provider-confdb: Calling provider defined DataSource Schema method: tf_rpc=ValidateDataResourceConfig @module=sdk.framework tf_provider_addr=localhost/dev/confdb @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:368 tf_data_source_type=confdb_vnet tf_req_id=ca8943db-2e79-1f8f-f368-3b4859a34b85 timestamp="2025-11-06T22:38:30.837+0100"
+2025-11-06T22:38:30.837+0100 [TRACE] provider.terraform-provider-confdb: Called provider defined DataSource Schema method: @module=sdk.framework tf_provider_addr=localhost/dev/confdb tf_rpc=ValidateDataResourceConfig @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:370 tf_data_source_type=confdb_vnet tf_req_id=ca8943db-2e79-1f8f-f368-3b4859a34b85 timestamp="2025-11-06T22:38:30.837+0100"
+2025-11-06T22:38:30.837+0100 [TRACE] provider.terraform-provider-confdb: Calling provider defined DataSource Schema method: @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:368 @module=sdk.framework tf_data_source_type=confdb_default_vnet tf_provider_addr=localhost/dev/confdb tf_req_id=d0b89062-2bd2-c59d-efd6-5075e1fe6670 tf_rpc=ValidateDataResourceConfig timestamp="2025-11-06T22:38:30.837+0100"
+2025-11-06T22:38:30.837+0100 [TRACE] provider.terraform-provider-confdb: Called provider defined DataSource Schema method: tf_data_source_type=confdb_default_vnet tf_rpc=ValidateDataResourceConfig @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:370 @module=sdk.framework tf_provider_addr=localhost/dev/confdb tf_req_id=d0b89062-2bd2-c59d-efd6-5075e1fe6670 timestamp="2025-11-06T22:38:30.837+0100"
+2025-11-06T22:38:30.837+0100 [TRACE] provider.terraform-provider-confdb: Received downstream response: diagnostic_error_count=0 diagnostic_warning_count=0 tf_req_duration_ms=0 tf_req_id=ca8943db-2e79-1f8f-f368-3b4859a34b85 tf_rpc=ValidateDataResourceConfig @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/internal/tf6serverlogging/downstream_request.go:61 @module=sdk.proto tf_data_source_type=confdb_vnet tf_proto_version=6.10 tf_provider_addr=localhost/dev/confdb timestamp="2025-11-06T22:38:30.837+0100"
+2025-11-06T22:38:30.837+0100 [TRACE] provider.terraform-provider-confdb: Served request: tf_req_id=ca8943db-2e79-1f8f-f368-3b4859a34b85 tf_proto_version=6.10 tf_rpc=ValidateDataResourceConfig @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/tf6server/server.go:716 @module=sdk.proto tf_data_source_type=confdb_vnet tf_provider_addr=localhost/dev/confdb timestamp="2025-11-06T22:38:30.837+0100"
+2025-11-06T22:38:30.837+0100 [TRACE] provider.terraform-provider-confdb: Received downstream response: diagnostic_error_count=0 tf_data_source_type=confdb_default_vnet tf_provider_addr=localhost/dev/confdb tf_rpc=ValidateDataResourceConfig @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/internal/tf6serverlogging/downstream_request.go:61 @module=sdk.proto diagnostic_warning_count=0 tf_proto_version=6.10 tf_req_duration_ms=0 tf_req_id=d0b89062-2bd2-c59d-efd6-5075e1fe6670 timestamp="2025-11-06T22:38:30.837+0100"
+2025-11-06T22:38:30.837+0100 [TRACE] provider.terraform-provider-confdb: Served request: tf_proto_version=6.10 tf_req_id=d0b89062-2bd2-c59d-efd6-5075e1fe6670 @module=sdk.proto tf_provider_addr=localhost/dev/confdb tf_rpc=ValidateDataResourceConfig @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/tf6server/server.go:716 tf_data_source_type=confdb_default_vnet timestamp="2025-11-06T22:38:30.837+0100"
+2025-11-06T22:38:30.837+0100 [TRACE] readDataSource: data.confdb_vnet.some_vnet configuration is complete, so reading from provider
+2025-11-06T22:38:30.837+0100 [TRACE] GRPCProvider.v6: ReadDataSource
+2025-11-06T22:38:30.837+0100 [TRACE] GRPCProvider.v6: returning cached schema: EXTRA_VALUE_AT_END=localhost/dev/confdb
+2025-11-06T22:38:30.837+0100 [TRACE] readDataSource: data.confdb_default_vnet.default_vnet configuration is complete, so reading from provider
+2025-11-06T22:38:30.837+0100 [TRACE] GRPCProvider.v6: ReadDataSource
+2025-11-06T22:38:30.838+0100 [TRACE] GRPCProvider.v6: returning cached schema: EXTRA_VALUE_AT_END=localhost/dev/confdb
+2025-11-06T22:38:30.838+0100 [TRACE] provider.terraform-provider-confdb: Received request: tf_provider_addr=localhost/dev/confdb tf_req_id=b301d6c9-1819-6d22-3e28-ea9c198afea8 @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/tf6server/server.go:725 @module=sdk.proto tf_data_source_type=confdb_vnet tf_rpc=ReadDataSource tf_proto_version=6.10 timestamp="2025-11-06T22:38:30.838+0100"
+2025-11-06T22:38:30.838+0100 [TRACE] provider.terraform-provider-confdb: Announced client capabilities: @module=sdk.proto tf_data_source_type=confdb_vnet tf_proto_version=6.10 tf_provider_addr=localhost/dev/confdb @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/internal/tf6serverlogging/client_capabilities.go:52 tf_client_capability_deferral_allowed=false tf_req_id=b301d6c9-1819-6d22-3e28-ea9c198afea8 tf_rpc=ReadDataSource timestamp="2025-11-06T22:38:30.838+0100"
+2025-11-06T22:38:30.838+0100 [TRACE] provider.terraform-provider-confdb: Received request: @module=sdk.proto tf_data_source_type=confdb_default_vnet @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/tf6server/server.go:725 tf_proto_version=6.10 tf_provider_addr=localhost/dev/confdb tf_req_id=735bee20-7ea8-a1fb-3753-6622841e365a tf_rpc=ReadDataSource timestamp="2025-11-06T22:38:30.838+0100"
+2025-11-06T22:38:30.838+0100 [TRACE] provider.terraform-provider-confdb: Announced client capabilities: @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/internal/tf6serverlogging/client_capabilities.go:52 tf_client_capability_deferral_allowed=false tf_data_source_type=confdb_default_vnet @module=sdk.proto tf_proto_version=6.10 tf_provider_addr=localhost/dev/confdb tf_req_id=735bee20-7ea8-a1fb-3753-6622841e365a tf_rpc=ReadDataSource timestamp="2025-11-06T22:38:30.838+0100"
+2025-11-06T22:38:30.838+0100 [TRACE] provider.terraform-provider-confdb: Sending request downstream: tf_provider_addr=localhost/dev/confdb tf_rpc=ReadDataSource @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/internal/tf6serverlogging/downstream_request.go:22 tf_data_source_type=confdb_vnet tf_proto_version=6.10 tf_req_id=b301d6c9-1819-6d22-3e28-ea9c198afea8 @module=sdk.proto timestamp="2025-11-06T22:38:30.838+0100"
+2025-11-06T22:38:30.838+0100 [TRACE] provider.terraform-provider-confdb: Sending request downstream: tf_req_id=735bee20-7ea8-a1fb-3753-6622841e365a @module=sdk.proto tf_proto_version=6.10 tf_provider_addr=localhost/dev/confdb tf_rpc=ReadDataSource @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/internal/tf6serverlogging/downstream_request.go:22 tf_data_source_type=confdb_default_vnet timestamp="2025-11-06T22:38:30.838+0100"
+2025-11-06T22:38:30.838+0100 [TRACE] provider.terraform-provider-confdb: Checking DataSourceTypes lock: @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:276 @module=sdk.framework tf_data_source_type=confdb_vnet tf_provider_addr=localhost/dev/confdb tf_req_id=b301d6c9-1819-6d22-3e28-ea9c198afea8 tf_rpc=ReadDataSource timestamp="2025-11-06T22:38:30.838+0100"
+2025-11-06T22:38:30.838+0100 [TRACE] provider.terraform-provider-confdb: Checking DataSourceTypes lock: @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server.go:276 tf_data_source_type=confdb_default_vnet tf_provider_addr=localhost/dev/confdb tf_req_id=735bee20-7ea8-a1fb-3753-6622841e365a tf_rpc=ReadDataSource @module=sdk.framework timestamp="2025-11-06T22:38:30.838+0100"
+2025-11-06T22:38:30.838+0100 [TRACE] provider.terraform-provider-confdb: Calling provider defined DataSource Read: @module=sdk.framework tf_data_source_type=confdb_vnet tf_rpc=ReadDataSource @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server_readdatasource.go:102 tf_provider_addr=localhost/dev/confdb tf_req_id=b301d6c9-1819-6d22-3e28-ea9c198afea8 timestamp="2025-11-06T22:38:30.838+0100"
+2025-11-06T22:38:30.838+0100 [TRACE] provider.terraform-provider-confdb: Calling provider defined DataSource Read: tf_data_source_type=confdb_default_vnet tf_rpc=ReadDataSource @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server_readdatasource.go:102 @module=sdk.framework tf_provider_addr=localhost/dev/confdb tf_req_id=735bee20-7ea8-a1fb-3753-6622841e365a timestamp="2025-11-06T22:38:30.838+0100"
+2025-11-06T22:38:30.838+0100 [TRACE] provider.terraform-provider-confdb: Called provider defined DataSource Read: tf_provider_addr=localhost/dev/confdb tf_req_id=b301d6c9-1819-6d22-3e28-ea9c198afea8 tf_rpc=ReadDataSource tf_data_source_type=confdb_vnet @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server_readdatasource.go:104 @module=sdk.framework timestamp="2025-11-06T22:38:30.838+0100"
+2025-11-06T22:38:30.838+0100 [TRACE] provider.terraform-provider-confdb: Called provider defined DataSource Read: tf_req_id=735bee20-7ea8-a1fb-3753-6622841e365a tf_rpc=ReadDataSource @module=sdk.framework tf_data_source_type=confdb_default_vnet @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-framework@v1.16.1/internal/fwserver/server_readdatasource.go:104 tf_provider_addr=localhost/dev/confdb timestamp="2025-11-06T22:38:30.838+0100"
+2025-11-06T22:38:30.838+0100 [TRACE] provider.stdio: received data: channel=STDOUT len=86
+2025-11-06T22:38:30.838+0100 [WARN]  unexpected data:
+  localhost/dev/confdb:stdout=
+  | xxx region: "westeurope"
+  | xxx environment: "dev"
+  | xxx subscription: "f9ijewc9ijiwemkcd"
+  
+2025-11-06T22:38:30.838+0100 [TRACE] provider.stdio: waiting for stdio data
+2025-11-06T22:38:30.838+0100 [TRACE] provider.terraform-provider-confdb: Received downstream response: diagnostic_error_count=0 tf_proto_version=6.10 tf_provider_addr=localhost/dev/confdb tf_req_duration_ms=0 tf_req_id=b301d6c9-1819-6d22-3e28-ea9c198afea8 tf_rpc=ReadDataSource @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/internal/tf6serverlogging/downstream_request.go:61 @module=sdk.proto diagnostic_warning_count=0 tf_data_source_type=confdb_vnet timestamp="2025-11-06T22:38:30.838+0100"
+2025-11-06T22:38:30.838+0100 [TRACE] provider.terraform-provider-confdb: Served request: tf_provider_addr=localhost/dev/confdb tf_req_id=b301d6c9-1819-6d22-3e28-ea9c198afea8 tf_rpc=ReadDataSource @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/tf6server/server.go:754 @module=sdk.proto tf_data_source_type=confdb_vnet tf_proto_version=6.10 timestamp="2025-11-06T22:38:30.838+0100"
+2025-11-06T22:38:30.838+0100 [TRACE] provider.terraform-provider-confdb: Received downstream response: tf_req_duration_ms=0 tf_req_id=735bee20-7ea8-a1fb-3753-6622841e365a diagnostic_warning_count=0 tf_data_source_type=confdb_default_vnet tf_provider_addr=localhost/dev/confdb tf_rpc=ReadDataSource @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/internal/tf6serverlogging/downstream_request.go:61 @module=sdk.proto diagnostic_error_count=0 tf_proto_version=6.10 timestamp="2025-11-06T22:38:30.838+0100"
+2025-11-06T22:38:30.838+0100 [TRACE] provider.terraform-provider-confdb: Served request: tf_rpc=ReadDataSource @module=sdk.proto tf_proto_version=6.10 @caller=/home/fmn/go/pkg/mod/github.com/hashicorp/terraform-plugin-go@v0.29.0/tfprotov6/tf6server/server.go:754 tf_data_source_type=confdb_default_vnet tf_provider_addr=localhost/dev/confdb tf_req_id=735bee20-7ea8-a1fb-3753-6622841e365a timestamp="2025-11-06T22:38:30.838+0100"
+2025-11-06T22:38:30.838+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.838+0100 [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState to refreshState for data.confdb_vnet.some_vnet
+2025-11-06T22:38:30.838+0100 [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState: writing state object for data.confdb_vnet.some_vnet
+2025-11-06T22:38:30.838+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.838+0100 [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState to workingState for data.confdb_vnet.some_vnet
+2025-11-06T22:38:30.838+0100 [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState: writing state object for data.confdb_vnet.some_vnet
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "data.confdb_vnet.some_vnet": visit complete
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "root": does not belong to any module instance
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "root": visit complete
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "data.confdb_vnet.some_vnet (expand)": dynamic subgraph completed successfully
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "data.confdb_vnet.some_vnet (expand)": visit complete
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "output.x (expand)": starting visit (*terraform.nodeExpandOutput)
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "output.x (expand)": does not belong to any module instance
+2025-11-06T22:38:30.838+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.838+0100 [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState to refreshState for data.confdb_default_vnet.default_vnet
+2025-11-06T22:38:30.838+0100 [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState: writing state object for data.confdb_default_vnet.default_vnet
+2025-11-06T22:38:30.838+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.838+0100 [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState to workingState for data.confdb_default_vnet.default_vnet
+2025-11-06T22:38:30.838+0100 [TRACE] NodeAbstractResouceInstance.writeResourceInstanceState: writing state object for data.confdb_default_vnet.default_vnet
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "data.confdb_default_vnet.default_vnet": visit complete
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "root": does not belong to any module instance
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "root": visit complete
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "data.confdb_default_vnet.default_vnet (expand)": dynamic subgraph completed successfully
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "data.confdb_default_vnet.default_vnet (expand)": visit complete
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "output.x (expand)": expanding dynamic subgraph
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "output.y (expand)": starting visit (*terraform.nodeExpandOutput)
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "output.y (expand)": does not belong to any module instance
+2025-11-06T22:38:30.838+0100 [TRACE] Expanding output: adding output.x as *terraform.NodeApplyableOutput
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "output.y (expand)": expanding dynamic subgraph
+2025-11-06T22:38:30.838+0100 [TRACE] Expanding output: adding output.y as *terraform.NodeApplyableOutput
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "provider[\"localhost/dev/confdb\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "provider[\"localhost/dev/confdb\"] (close)": does not belong to any module instance
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "output.y (expand)": entering dynamic subgraph
+2025-11-06T22:38:30.838+0100 [TRACE] GRPCProvider.v6: Close
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "output.x (expand)": entering dynamic subgraph
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "output.y": starting visit (*terraform.NodeApplyableOutput)
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "output.y": belongs to
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "output.x": starting visit (*terraform.NodeApplyableOutput)
+2025-11-06T22:38:30.838+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "output.x": belongs to
+2025-11-06T22:38:30.838+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.838+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.838+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.838+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.838+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.838+0100 [TRACE] setValue: Saving Create change for output.y in changeset
+2025-11-06T22:38:30.838+0100 [TRACE] setValue: Saving value for output.y in state
+2025-11-06T22:38:30.838+0100 [TRACE] setValue: Saving Create change for output.x in changeset
+2025-11-06T22:38:30.838+0100 [TRACE] setValue: Saving value for output.y in state
+2025-11-06T22:38:30.838+0100 [TRACE] setValue: Saving value for output.x in state
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "output.y": visit complete
+2025-11-06T22:38:30.838+0100 [TRACE] setValue: Saving value for output.x in state
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "output.x": visit complete
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "root": does not belong to any module instance
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "root": visit complete
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "output.y (expand)": dynamic subgraph completed successfully
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "output.y (expand)": visit complete
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "root": does not belong to any module instance
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "root": visit complete
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "output.x (expand)": dynamic subgraph completed successfully
+2025-11-06T22:38:30.838+0100 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2025-11-06T22:38:30.838+0100 [TRACE] vertex "output.x (expand)": visit complete
+2025-11-06T22:38:30.839+0100 [INFO]  provider: plugin process exited: plugin=/home/fmn/go/bin/terraform-provider-confdb id=1707759
+2025-11-06T22:38:30.843+0100 [DEBUG] provider: plugin exited
+2025-11-06T22:38:30.843+0100 [TRACE] vertex "provider[\"localhost/dev/confdb\"] (close)": visit complete
+2025-11-06T22:38:30.843+0100 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2025-11-06T22:38:30.843+0100 [TRACE] vertex "root": does not belong to any module instance
+2025-11-06T22:38:30.843+0100 [TRACE] vertex "root": visit complete
+2025-11-06T22:38:30.843+0100 [TRACE] LoadSchemas: retrieving schema for provider type "localhost/dev/confdb"
+2025-11-06T22:38:30.843+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.843+0100 [TRACE] LoadSchemas: retrieving schema for provider type "localhost/dev/confdb"
+2025-11-06T22:38:30.843+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.843+0100 [TRACE] Plan is complete
+2025-11-06T22:38:30.843+0100 [TRACE] Plan is applyable
+2025-11-06T22:38:30.843+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.843+0100 [TRACE] LoadSchemas: retrieving schema for provider type "localhost/dev/confdb"
+2025-11-06T22:38:30.843+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.843+0100 [DEBUG] building apply graph to check for errors
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] ConfigTransformer: Starting for path:
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.variableValidationTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] variableValidationTransformer: adding validation nodes for any existing variable evaluation nodes
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.LocalTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.OutputTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] OutputTransformer: adding x as *terraform.nodeExpandOutput
+2025-11-06T22:38:30.843+0100 [TRACE] OutputTransformer: adding y as *terraform.nodeExpandOutput
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.DiffTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.DeferredTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.checkTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] AttachResourceConfigTransformer: attaching to "data.confdb_vnet.some_vnet (expand)" (*terraform.nodeExpandApplyableResource) config from hcl.Range{Filename:"main.tf", Start:hcl.Pos{Line:15, Column:1, Byte:207}, End:hcl.Pos{Line:15, Column:31, Byte:237}}
+2025-11-06T22:38:30.843+0100 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.confdb_vnet.some_vnet (expand)
+2025-11-06T22:38:30.843+0100 [TRACE] AttachResourceConfigTransformer: attaching to "data.confdb_default_vnet.default_vnet (expand)" (*terraform.nodeExpandApplyableResource) config from hcl.Range{Filename:"main.tf", Start:hcl.Pos{Line:16, Column:1, Byte:241}, End:hcl.Pos{Line:16, Column:42, Byte:282}}
+2025-11-06T22:38:30.843+0100 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.confdb_default_vnet.default_vnet (expand)
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2025-11-06T22:38:30.843+0100 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.externalProviderTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.externalProviderTransformer with new graph:
+  data.confdb_default_vnet.default_vnet (expand) - *terraform.nodeExpandApplyableResource
+  data.confdb_vnet.some_vnet (expand) - *terraform.nodeExpandApplyableResource
+  output.x (expand) - *terraform.nodeExpandOutput
+  output.y (expand) - *terraform.nodeExpandOutput
+  ------
+2025-11-06T22:38:30.843+0100 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] ProviderConfigTransformer: attaching to "provider[\"localhost/dev/confdb\"]" provider configuration from main.tf:9,1-18
+2025-11-06T22:38:30.843+0100 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  data.confdb_default_vnet.default_vnet (expand) - *terraform.nodeExpandApplyableResource
+  data.confdb_vnet.some_vnet (expand) - *terraform.nodeExpandApplyableResource
+  output.x (expand) - *terraform.nodeExpandOutput
+  output.y (expand) - *terraform.nodeExpandOutput
+  provider["localhost/dev/confdb"] - *terraform.NodeApplyableProvider
+  ------
+2025-11-06T22:38:30.843+0100 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2025-11-06T22:38:30.843+0100 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] ProviderTransformer: exact match for provider["localhost/dev/confdb"] serving data.confdb_vnet.some_vnet (expand)
+2025-11-06T22:38:30.843+0100 [DEBUG] ProviderTransformer: "data.confdb_vnet.some_vnet (expand)" (*terraform.nodeExpandApplyableResource) needs provider["localhost/dev/confdb"]
+2025-11-06T22:38:30.843+0100 [TRACE] ProviderTransformer: exact match for provider["localhost/dev/confdb"] serving data.confdb_default_vnet.default_vnet (expand)
+2025-11-06T22:38:30.843+0100 [DEBUG] ProviderTransformer: "data.confdb_default_vnet.default_vnet (expand)" (*terraform.nodeExpandApplyableResource) needs provider["localhost/dev/confdb"]
+2025-11-06T22:38:30.843+0100 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  data.confdb_default_vnet.default_vnet (expand) - *terraform.nodeExpandApplyableResource
+    provider["localhost/dev/confdb"] - *terraform.NodeApplyableProvider
+  data.confdb_vnet.some_vnet (expand) - *terraform.nodeExpandApplyableResource
+    provider["localhost/dev/confdb"] - *terraform.NodeApplyableProvider
+  output.x (expand) - *terraform.nodeExpandOutput
+  output.y (expand) - *terraform.nodeExpandOutput
+  provider["localhost/dev/confdb"] - *terraform.NodeApplyableProvider
+  ------
+2025-11-06T22:38:30.843+0100 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.843+0100 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["localhost/dev/confdb"]
+2025-11-06T22:38:30.843+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.843+0100 [TRACE] AttachSchemaTransformer: attaching resource schema to data.confdb_vnet.some_vnet (expand)
+2025-11-06T22:38:30.843+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.843+0100 [TRACE] AttachSchemaTransformer: attaching resource schema to data.confdb_default_vnet.default_vnet (expand)
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.ExternalReferenceTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2025-11-06T22:38:30.843+0100 [DEBUG] ReferenceTransformer: "data.confdb_vnet.some_vnet (expand)" references: []
+2025-11-06T22:38:30.843+0100 [DEBUG] ReferenceTransformer: "data.confdb_default_vnet.default_vnet (expand)" references: []
+2025-11-06T22:38:30.843+0100 [DEBUG] ReferenceTransformer: "output.x (expand)" references: [data.confdb_vnet.some_vnet (expand)]
+2025-11-06T22:38:30.843+0100 [DEBUG] ReferenceTransformer: "output.y (expand)" references: [data.confdb_default_vnet.default_vnet (expand)]
+2025-11-06T22:38:30.843+0100 [DEBUG] ReferenceTransformer: "provider[\"localhost/dev/confdb\"]" references: []
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] AttachDependenciesTransformer: output.x (expand) depends on [data.confdb_vnet.some_vnet]
+2025-11-06T22:38:30.843+0100 [TRACE] AttachDependenciesTransformer: output.y (expand) depends on [data.confdb_default_vnet.default_vnet]
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.checkStartTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] ForcedCBDTransformer: "data.confdb_vnet.some_vnet (expand)" (*terraform.nodeExpandApplyableResource) has no CBD descendant, so skipping
+2025-11-06T22:38:30.843+0100 [TRACE] ForcedCBDTransformer: "data.confdb_default_vnet.default_vnet (expand)" (*terraform.nodeExpandApplyableResource) has no CBD descendant, so skipping
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.DestroyEdgeTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.CBDEdgeTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.pruneUnusedNodesTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.ephemeralResourceCloseTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2025-11-06T22:38:30.843+0100 [TRACE] Completed graph transform:
+data.confdb_default_vnet.default_vnet (expand) - *terraform.nodeExpandApplyableResource
+  provider["localhost/dev/confdb"] - *terraform.NodeApplyableProvider
+data.confdb_vnet.some_vnet (expand) - *terraform.nodeExpandApplyableResource
+  provider["localhost/dev/confdb"] - *terraform.NodeApplyableProvider
+output.x (expand) - *terraform.nodeExpandOutput
+  data.confdb_vnet.some_vnet (expand) - *terraform.nodeExpandApplyableResource
+output.y (expand) - *terraform.nodeExpandOutput
+  data.confdb_default_vnet.default_vnet (expand) - *terraform.nodeExpandApplyableResource
+provider["localhost/dev/confdb"] - *terraform.NodeApplyableProvider
+provider["localhost/dev/confdb"] (close) - *terraform.graphNodeCloseProvider
+  data.confdb_default_vnet.default_vnet (expand) - *terraform.nodeExpandApplyableResource
+  data.confdb_vnet.some_vnet (expand) - *terraform.nodeExpandApplyableResource
+root - *terraform.nodeCloseModule
+  output.x (expand) - *terraform.nodeExpandOutput
+  output.y (expand) - *terraform.nodeExpandOutput
+  provider["localhost/dev/confdb"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2025-11-06T22:38:30.843+0100 [INFO]  backend/local: plan operation completed
+2025-11-06T22:38:30.844+0100 [TRACE] LoadSchemas: retrieving schema for provider type "localhost/dev/confdb"
+2025-11-06T22:38:30.844+0100 [TRACE] terraform.contextPlugins: Schema for provider "localhost/dev/confdb" is in the global cache
+2025-11-06T22:38:30.844+0100 [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
+2025-11-06T22:38:30.844+0100 [TRACE] statemgr.Filesystem: unlocking terraform.tfstate using fcntl flock
