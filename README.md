@@ -4,6 +4,8 @@
 
 This is a case study; a custom Terraform Provider based on HashiCorp's [Implement a provider with the Terraform Plugin Framework](https://developer.hashicorp.com/terraform/tutorials/providers-plugin-framework/providers-plugin-framework-provider) guide.
 
+It is a [data source](https://developer.hashicorp.com/terraform/language/block/data)-only provider.
+
 Basic premise of this project is that, instead of using libraries and configuration facilities built into CI/CDs (For example Azure Devops ["variable groups"](https://learn.microsoft.com/en-us/azure/devops/pipelines/library/)), you can use Terraform-native way.
 
 Some of the benefits of this approach:
