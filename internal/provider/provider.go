@@ -66,11 +66,14 @@ type ConfDBProviderModel struct {
 
 // Configure does nothing, at this point of time API client is not needed.
 func (p *confDBProvider) Configure(ctx context.Context, req provider.ConfigureRequest, resp *provider.ConfigureResponse) {
+	// this could perhaps be passed as data source client parameters.
+	// those attributes should not change within a single provider instance / terraform module
+	// so i guess it's fine the way it is.
 	var config ConfDBProviderModel
 	_ = req.Config.Get(ctx, &config)
-	environment = config.Environment.String()
-	subscription = config.Subscription.String()
-	region = config.Region.String()
+	environment = config.Environment.ValueString()
+	subscription = config.Subscription.ValueString()
+	region = config.Region.ValueString()
 }
 
 // Resources does nothing - at this point of time provider is not implementing any resources.

@@ -1,0 +1,172 @@
+{
+  "subscriptions": {
+    "sub1": {
+      "envs": {
+        "dev": {
+          "name": "dev",
+          "regions": {
+            "northeurope": {
+              "name": "northeurope",
+              "vnets": {
+                "vnet5": {
+                  "description": "something something",
+                  "env": "dev",
+                  "id": "vnet5_id",
+                  "name": "vnet5"
+                },
+                "vnet6": {
+                  "description": "some text",
+                  "env": "dev",
+                  "id": "vnet6_id",
+                  "name": "vnet6"
+                }
+              }
+            },
+            "westeurope": {
+              "name": "westeurope",
+              "vnets": {
+                "vnet7": {
+                  "description": "something something",
+                  "env": "dev",
+                  "id": "vnet7_id",
+                  "name": "vnet7"
+                },
+                "vnet8": {
+                  "description": "some text",
+                  "env": "dev",
+                  "id": "vnet8_id",
+                  "name": "vnet8"
+                }
+              }
+            }
+          }
+        },
+        "lab": {
+          "name": "lab",
+          "regions": {
+            "northeurope": {
+              "name": "northeurope",
+              "vnets": {
+                "vnet1": {
+                  "description": "something something",
+                  "env": "lab",
+                  "id": "vnet1_id",
+                  "name": "vnet1"
+                },
+                "vnet2": {
+                  "description": "some text",
+                  "env": "lab",
+                  "id": "vnet2_id",
+                  "name": "vnet2"
+                }
+              }
+            },
+            "westeurope": {
+              "name": "westeurope",
+              "vnets": {
+                "vnet3": {
+                  "description": "something something",
+                  "env": "lab",
+                  "id": "vnet3_id",
+                  "name": "vnet3"
+                },
+                "vnet4": {
+                  "description": "some text",
+                  "env": "lab",
+                  "id": "vnet4_id",
+                  "name": "vnet4"
+                }
+              }
+            }
+          }
+        }
+      },
+      "id": "sub1_id",
+      "name": "sub1"
+    },
+    "sub2": {
+      "envs": {
+        "prod": {
+          "name": "prod",
+          "regions": {
+            "northeurope": {
+              "name": "northeurope",
+              "vnets": {
+                "vnete": {
+                  "description": "something something",
+                  "env": "prod",
+                  "id": "vnete_id",
+                  "name": "vnete"
+                },
+                "vnetf": {
+                  "description": "some text",
+                  "env": "prod",
+                  "id": "vnetf_id",
+                  "name": "vnetf"
+                }
+              }
+            },
+            "westeurope": {
+              "name": "westeurope",
+              "vnets": {
+                "vnetg": {
+                  "description": "something something",
+                  "env": "prod",
+                  "id": "vnetg_id",
+                  "name": "vnetg"
+                },
+                "vneth": {
+                  "description": "some text",
+                  "env": "prod",
+                  "id": "vneth_id",
+                  "name": "vneth"
+                }
+              }
+            }
+          }
+        },
+        "uat": {
+          "name": "uat",
+          "regions": {
+            "northeurope": {
+              "name": "northeurope",
+              "vnets": {
+                "vneta": {
+                  "description": "something something",
+                  "env": "uat",
+                  "id": "vneta_id",
+                  "name": "vneta"
+                },
+                "vnetb": {
+                  "description": "some text",
+                  "env": "uat",
+                  "id": "vnetb_id",
+                  "name": "vnetb"
+                }
+              }
+            },
+            "westeurope": {
+              "name": "westeurope",
+              "vnets": {
+                "vnetc": {
+                  "description": "something something",
+                  "env": "uat",
+                  "id": "vnetc_id",
+                  "name": "vnetc"
+                },
+                "vnetd": {
+                  "description": "some text",
+                  "env": "uat",
+                  "id": "vnetd_id",
+                  "name": "vnetd"
+                }
+              }
+            }
+          }
+        }
+      },
+      "id": "sub2_id",
+      "name": "sub2"
+    }
+  }
+}

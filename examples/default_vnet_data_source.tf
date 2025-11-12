@@ -7,9 +7,9 @@ terraform {
 }
 
 provider "confdb" {
-  region       = "westeurope"
-  subscription = "subscription1"
-  environment  = "dev"
+  region       = "northeurope"
+  subscription = "sub1"
+  environment  = "lab"
 }
 
 data "confdb_default_vnet" "default_vnet" {}

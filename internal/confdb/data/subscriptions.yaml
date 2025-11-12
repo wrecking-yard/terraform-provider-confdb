@@ -1,0 +1,125 @@
+subscriptions:
+  sub1:
+    name: sub1
+    id: sub1_id
+    envs:
+        lab:
+          name: &environment lab
+          regions:
+            northeurope:
+              name: northeurope
+              vnets:
+                vnet1:
+                  id: vnet1_id
+                  name: vnet1
+                  description: something something
+                  env: *environment
+                vnet2:
+                  id: vnet2_id
+                  name: vnet2
+                  description: some text
+                  env: *environment
+            westeurope:
+              name: westeurope
+              vnets:
+                vnet3:
+                  id: vnet3_id
+                  name: vnet3
+                  description: something something
+                  env: *environment
+                vnet4:
+                  id: vnet4_id
+                  name: vnet4
+                  description: some text
+                  env: *environment
+        dev:
+          name: &environment dev
+          regions:
+            northeurope:
+              name: northeurope
+              vnets:
+                vnet5:
+                  id: vnet5_id
+                  name: vnet5
+                  description: something something
+                  env: *environment
+                vnet6:
+                  id: vnet6_id
+                  name: vnet6
+                  description: some text
+                  env: *environment
+            westeurope:
+              name: westeurope
+              vnets:
+                vnet7:
+                  id: vnet7_id
+                  name: vnet7
+                  description: something something
+                  env: *environment
+                vnet8:
+                  id: vnet8_id
+                  name: vnet8
+                  description: some text
+                  env: *environment
+  sub2:
+    name: sub2
+    id: sub2_id
+    envs:
+        uat:
+          name: &environment uat
+          regions:
+            northeurope:
+              name: northeurope
+              vnets:
+                vneta:
+                  id: vneta_id
+                  name: vneta
+                  description: something something
+                  env: *environment
+                vnetb:
+                  id: vnetb_id
+                  name: vnetb
+                  description: some text
+                  env: *environment
+            westeurope:
+              name: westeurope
+              vnets:
+                vnetc:
+                  id: vnetc_id
+                  name: vnetc
+                  description: something something
+                  env: *environment
+                vnetd:
+                  id: vnetd_id
+                  name: vnetd
+                  description: some text
+                  env: *environment
+        prod:
+          name: &environment prod
+          regions:
+            northeurope:
+              name: northeurope
+              vnets:
+                vnete:
+                  id: vnete_id
+                  name: vnete
+                  description: something something
+                  env: *environment
+                vnetf:
+                  id: vnetf_id
+                  name: vnetf
+                  description: some text
+                  env: *environment
+            westeurope:
+              name: westeurope
+              vnets:
+                vnetg:
+                  id: vnetg_id
+                  name: vnetg
+                  description: something something
+                  env: *environment
+                vneth:
+                  id: vneth_id
+                  name: vneth
+                  description: some text
+                  env: *environment

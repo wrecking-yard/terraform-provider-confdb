@@ -2,7 +2,10 @@ package provider
 
 import (
 	"context"
-	"fmt"
+	"embed"
+	"encoding/json"
+
+	"codeberg.org/wrecking-yard/terraform-provider-confdb/internal/confdb"
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/datasource/schema"
 	"github.com/hashicorp/terraform-plugin-framework/types"
@@ -70,18 +73,23 @@ func (d *defaultVnetDataSource) Schema(_ context.Context, _ datasource.SchemaReq
 
 // Read refreshes the Terraform state with the latest data.
 func (d *defaultVnetDataSource) Read(ctx context.Context, req datasource.ReadRequest, resp *datasource.ReadResponse) {
-	fmt.Printf("xxx region: %s\n", region)
-	fmt.Printf("xxx environment: %s\n", environment)
-	fmt.Printf("xxx subscription: %s\n", subscription)
+
+	cdb := confdb.ConfDB{}
+	cdb.Init(embed.FS{}, "", subscription, environment, region)
+	defaultVnet, _ := cdb.DefaultVNet()
+
+	_json, _ := json.Marshal(defaultVnet)
+	_defaultVnet := confdb.VNet{}
+	_ = json.Unmarshal(_json, &_defaultVnet)
 
 	// Map response body to model
 	defaultVnetState := defaultVnetDataSourceModel{
 		Vnet: defaultVnetModel{
-			ID:          types.StringValue("/.../xyz/defaultVnet-01"),
-			Name:        types.StringValue("defaultVnet-01"),
-			Description: types.StringValue("some desc"),
-			Region:      types.StringValue("some desc"),
-			Environment: types.StringValue("some desc"),
+			ID:          types.StringValue(_defaultVnet.ID),
+			Name:        types.StringValue(_defaultVnet.Name),
+			Description: types.StringValue("something something"),
+			Region:      types.StringValue(region),
+			Environment: types.StringValue(environment),
 		},
 	}
 

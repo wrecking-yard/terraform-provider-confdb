@@ -13,7 +13,7 @@ func main() {
 		Address: "localhost/dev/confdb",
 	}
 
-	version := "v0.5a"
+	version := "dev"
 	err := providerserver.Serve(context.Background(), provider.New(version), opts)
 	if err != nil {
 		log.Fatal(err.Error())
