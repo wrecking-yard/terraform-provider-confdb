@@ -6,7 +6,7 @@ import (
 	"reflect"
 
 	"codeberg.org/wrecking-yard/terraform-provider-confdb/internal/confdb/data"
-	"github.com/itchyny/gojq"
+	"codeberg.org/wrecking-yard/terraform-provider-confdb/internal/confdb/helpers"
 )
 
 type ResourceGroup struct {
@@ -21,16 +21,16 @@ type PrivateDNSZones struct {
 }
 
 type Subnet struct {
-	ID      string
-	Name    string
-	Range   string
+	ID      string `json:"id"`
+	Name    string `json:"name"`
+	Range   string `json:"range"`
 	Default bool
 }
 
 type VNet struct {
-	ID            string
-	Name          string
-	Subnets       map[string]Subnet
+	ID            string            `json:"id"`
+	Name          string            `json:"name"`
+	Subnets       map[string]Subnet `json:"subnets"`
 	ResourceGroup *ResourceGroup
 }
 
@@ -112,30 +112,19 @@ func (confdb *ConfDB) Init(fs embed.FS, fileName, subscription, environment, reg
 }
 
 func (confdb ConfDB) DefaultVNet() (map[string]any, error) {
-
-	query, err := gojq.Parse(
-		".subscriptions." + confdb.subscription + ".envs." + confdb.environment + ".regions." + confdb.region + ".vnets | map(.)[0]",
-	)
+	query := ".subscriptions." + confdb.subscription + ".envs." + confdb.environment + ".regions." + confdb.region + ".vnets.default"
+	res, err := helpers.GoJqQuery(query, confdb.obj)
 	if err != nil {
 		return map[string]any{}, err
 	}
+	return res, nil
+}
 
-	// https://github.com/itchyny/gojq?tab=readme-ov-file#usage-as-a-library
-	iter := query.Run(confdb.obj)
-	vnet := map[string]any{}
-	for {
-		v, ok := iter.Next()
-		if !ok {
-			break
-		}
-		if err, ok := v.(error); ok {
-			if err, ok := err.(*gojq.HaltError); ok && err.Value() == nil {
-				break
-			}
-			return map[string]any{}, err
-		}
-		vnet, _ = v.(map[string]any)
-		break
+func (confdb ConfDB) DefaultSubnet(vnetName string) (map[string]any, error) {
+	query := ".subscriptions." + confdb.subscription + ".envs." + confdb.environment + ".regions." + confdb.region + ".vnets." + vnetName + ".subnets.default"
+	res, err := helpers.GoJqQuery(query, confdb.obj)
+	if err != nil {
+		return map[string]any{}, err
 	}
-	return vnet, nil
+	return res, nil
 }

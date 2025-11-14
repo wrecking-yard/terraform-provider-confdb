@@ -8,34 +8,178 @@
             "northeurope": {
               "name": "northeurope",
               "vnets": {
+                "default": {
+                  "description": "something something",
+                  "env": "dev",
+                  "id": "vnet5_id",
+                  "name": "vnet5",
+                  "subnets": {
+                    "default": {
+                      "id": "subnet02_id",
+                      "name": "subnet02",
+                      "range": "10.0.3.0/24"
+                    },
+                    "pgsql03": {
+                      "id": "pgsql03_id",
+                      "name": "pgsql03",
+                      "range": "10.0.0.0/23"
+                    },
+                    "subnet01": {
+                      "id": "subnet01_id",
+                      "name": "subnet01",
+                      "range": "10.0.2.0/24"
+                    },
+                    "subnet02": {
+                      "id": "subnet02_id",
+                      "name": "subnet02",
+                      "range": "10.0.3.0/24"
+                    }
+                  }
+                },
                 "vnet5": {
                   "description": "something something",
                   "env": "dev",
                   "id": "vnet5_id",
-                  "name": "vnet5"
+                  "name": "vnet5",
+                  "subnets": {
+                    "default": {
+                      "id": "subnet02_id",
+                      "name": "subnet02",
+                      "range": "10.0.3.0/24"
+                    },
+                    "pgsql03": {
+                      "id": "pgsql03_id",
+                      "name": "pgsql03",
+                      "range": "10.0.0.0/23"
+                    },
+                    "subnet01": {
+                      "id": "subnet01_id",
+                      "name": "subnet01",
+                      "range": "10.0.2.0/24"
+                    },
+                    "subnet02": {
+                      "id": "subnet02_id",
+                      "name": "subnet02",
+                      "range": "10.0.3.0/24"
+                    }
+                  }
                 },
                 "vnet6": {
                   "description": "some text",
                   "env": "dev",
                   "id": "vnet6_id",
-                  "name": "vnet6"
+                  "name": "vnet6",
+                  "subnets": {
+                    "default": {
+                      "id": "subnet02_id",
+                      "name": "subnet02",
+                      "range": "10.0.3.0/24"
+                    },
+                    "pgsql03": {
+                      "id": "pgsql03_id",
+                      "name": "pgsql03",
+                      "range": "10.0.0.0/23"
+                    },
+                    "subnet01": {
+                      "id": "subnet01_id",
+                      "name": "subnet01",
+                      "range": "10.0.2.0/24"
+                    },
+                    "subnet02": {
+                      "id": "subnet02_id",
+                      "name": "subnet02",
+                      "range": "10.0.3.0/24"
+                    }
+                  }
                 }
               }
             },
             "westeurope": {
               "name": "westeurope",
               "vnets": {
+                "default": {
+                  "description": "something something",
+                  "env": "dev",
+                  "id": "vnet7_id",
+                  "name": "vnet7",
+                  "subnets": {
+                    "default": {
+                      "id": "subnet01_id",
+                      "name": "subnet01",
+                      "range": "10.0.2.0/24"
+                    },
+                    "pgsql03": {
+                      "id": "pgsql03_id",
+                      "name": "pgsql03",
+                      "range": "10.0.0.0/23"
+                    },
+                    "subnet01": {
+                      "id": "subnet01_id",
+                      "name": "subnet01",
+                      "range": "10.0.2.0/24"
+                    },
+                    "subnet02": {
+                      "id": "subnet02_id",
+                      "name": "subnet02",
+                      "range": "10.0.3.0/24"
+                    }
+                  }
+                },
                 "vnet7": {
                   "description": "something something",
                   "env": "dev",
                   "id": "vnet7_id",
-                  "name": "vnet7"
+                  "name": "vnet7",
+                  "subnets": {
+                    "default": {
+                      "id": "subnet01_id",
+                      "name": "subnet01",
+                      "range": "10.0.2.0/24"
+                    },
+                    "pgsql03": {
+                      "id": "pgsql03_id",
+                      "name": "pgsql03",
+                      "range": "10.0.0.0/23"
+                    },
+                    "subnet01": {
+                      "id": "subnet01_id",
+                      "name": "subnet01",
+                      "range": "10.0.2.0/24"
+                    },
+                    "subnet02": {
+                      "id": "subnet02_id",
+                      "name": "subnet02",
+                      "range": "10.0.3.0/24"
+                    }
+                  }
                 },
                 "vnet8": {
                   "description": "some text",
                   "env": "dev",
                   "id": "vnet8_id",
-                  "name": "vnet8"
+                  "name": "vnet8",
+                  "subnets": {
+                    "default": {
+                      "id": "subnet02_id",
+                      "name": "subnet02",
+                      "range": "10.0.3.0/24"
+                    },
+                    "pgsql03": {
+                      "id": "pgsql03_id",
+                      "name": "pgsql03",
+                      "range": "10.0.0.0/23"
+                    },
+                    "subnet01": {
+                      "id": "subnet01_id",
+                      "name": "subnet01",
+                      "range": "10.0.2.0/24"
+                    },
+                    "subnet02": {
+                      "id": "subnet02_id",
+                      "name": "subnet02",
+                      "range": "10.0.3.0/24"
+                    }
+                  }
                 }
               }
             }
@@ -47,34 +191,178 @@
             "northeurope": {
               "name": "northeurope",
               "vnets": {
+                "default": {
+                  "description": "something something",
+                  "env": "lab",
+                  "id": "vnet1_id",
+                  "name": "vnet1",
+                  "subnets": {
+                    "default": {
+                      "id": "subnet01_id",
+                      "name": "subnet01",
+                      "range": "10.0.2.0/24"
+                    },
+                    "pgsql03": {
+                      "id": "pgsql03_id",
+                      "name": "pgsql03",
+                      "range": "10.0.0.0/23"
+                    },
+                    "subnet01": {
+                      "id": "subnet01_id",
+                      "name": "subnet01",
+                      "range": "10.0.2.0/24"
+                    },
+                    "subnet02": {
+                      "id": "subnet02_id",
+                      "name": "subnet02",
+                      "range": "10.0.3.0/24"
+                    }
+                  }
+                },
                 "vnet1": {
                   "description": "something something",
                   "env": "lab",
                   "id": "vnet1_id",
-                  "name": "vnet1"
+                  "name": "vnet1",
+                  "subnets": {
+                    "default": {
+                      "id": "subnet01_id",
+                      "name": "subnet01",
+                      "range": "10.0.2.0/24"
+                    },
+                    "pgsql03": {
+                      "id": "pgsql03_id",
+                      "name": "pgsql03",
+                      "range": "10.0.0.0/23"
+                    },
+                    "subnet01": {
+                      "id": "subnet01_id",
+                      "name": "subnet01",
+                      "range": "10.0.2.0/24"
+                    },
+                    "subnet02": {
+                      "id": "subnet02_id",
+                      "name": "subnet02",
+                      "range": "10.0.3.0/24"
+                    }
+                  }
                 },
                 "vnet2": {
                   "description": "some text",
                   "env": "lab",
                   "id": "vnet2_id",
-                  "name": "vnet2"
+                  "name": "vnet2",
+                  "subnets": {
+                    "default": {
+                      "id": "subnet02_id",
+                      "name": "subnet02",
+                      "range": "10.0.3.0/24"
+                    },
+                    "pgsql03": {
+                      "id": "pgsql03_id",
+                      "name": "pgsql03",
+                      "range": "10.0.0.0/23"
+                    },
+                    "subnet01": {
+                      "id": "subnet01_id",
+                      "name": "subnet01",
+                      "range": "10.0.2.0/24"
+                    },
+                    "subnet02": {
+                      "id": "subnet02_id",
+                      "name": "subnet02",
+                      "range": "10.0.3.0/24"
+                    }
+                  }
                 }
               }
             },
             "westeurope": {
               "name": "westeurope",
               "vnets": {
+                "default": {
+                  "description": "some text",
+                  "env": "lab",
+                  "id": "vnet4_id",
+                  "name": "vnet4",
+                  "subnets": {
+                    "default": {
+                      "id": "subnet01_id",
+                      "name": "subnet01",
+                      "range": "10.0.2.0/24"
+                    },
+                    "pgsql03": {
+                      "id": "pgsql03_id",
+                      "name": "pgsql03",
+                      "range": "10.0.0.0/23"
+                    },
+                    "subnet01": {
+                      "id": "subnet01_id",
+                      "name": "subnet01",
+                      "range": "10.0.2.0/24"
+                    },
+                    "subnet02": {
+                      "id": "subnet02_id",
+                      "name": "subnet02",
+                      "range": "10.0.3.0/24"
+                    }
+                  }
+                },
                 "vnet3": {
                   "description": "something something",
                   "env": "lab",
                   "id": "vnet3_id",
-                  "name": "vnet3"
+                  "name": "vnet3",
+                  "subnets": {
+                    "default": {
+                      "id": "subnet01_id",
+                      "name": "subnet01",
+                      "range": "10.0.2.0/24"
+                    },
+                    "pgsql03": {
+                      "id": "pgsql03_id",
+                      "name": "pgsql03",
+                      "range": "10.0.0.0/23"
+                    },
+                    "subnet01": {
+                      "id": "subnet01_id",
+                      "name": "subnet01",
+                      "range": "10.0.2.0/24"
+                    },
+                    "subnet02": {
+                      "id": "subnet02_id",
+                      "name": "subnet02",
+                      "range": "10.0.3.0/24"
+                    }
+                  }
                 },
                 "vnet4": {
                   "description": "some text",
                   "env": "lab",
                   "id": "vnet4_id",
-                  "name": "vnet4"
+                  "name": "vnet4",
+                  "subnets": {
+                    "default": {
+                      "id": "subnet01_id",
+                      "name": "subnet01",
+                      "range": "10.0.2.0/24"
+                    },
+                    "pgsql03": {
+                      "id": "pgsql03_id",
+                      "name": "pgsql03",
+                      "range": "10.0.0.0/23"
+                    },
+                    "subnet01": {
+                      "id": "subnet01_id",
+                      "name": "subnet01",
+                      "range": "10.0.2.0/24"
+                    },
+                    "subnet02": {
+                      "id": "subnet02_id",
+                      "name": "subnet02",
+                      "range": "10.0.3.0/24"
+                    }
+                  }
                 }
               }
             }
@@ -96,13 +384,47 @@
                   "description": "something something",
                   "env": "prod",
                   "id": "vnete_id",
-                  "name": "vnete"
+                  "name": "vnete",
+                  "subnets": {
+                    "pgsql03": {
+                      "id": "pgsql03_id",
+                      "name": "pgsql03",
+                      "range": "10.0.0.0/23"
+                    },
+                    "subnet01": {
+                      "id": "subnet01_id",
+                      "name": "subnet01",
+                      "range": "10.0.2.0/24"
+                    },
+                    "subnet02": {
+                      "id": "subnet02_id",
+                      "name": "subnet02",
+                      "range": "10.0.3.0/24"
+                    }
+                  }
                 },
                 "vnetf": {
                   "description": "some text",
                   "env": "prod",
                   "id": "vnetf_id",
-                  "name": "vnetf"
+                  "name": "vnetf",
+                  "subnets": {
+                    "pgsql03": {
+                      "id": "pgsql03_id",
+                      "name": "pgsql03",
+                      "range": "10.0.0.0/23"
+                    },
+                    "subnet01": {
+                      "id": "subnet01_id",
+                      "name": "subnet01",
+                      "range": "10.0.2.0/24"
+                    },
+                    "subnet02": {
+                      "id": "subnet02_id",
+                      "name": "subnet02",
+                      "range": "10.0.3.0/24"
+                    }
+                  }
                 }
               }
             },
@@ -113,13 +435,47 @@
                   "description": "something something",
                   "env": "prod",
                   "id": "vnetg_id",
-                  "name": "vnetg"
+                  "name": "vnetg",
+                  "subnets": {
+                    "pgsql03": {
+                      "id": "pgsql03_id",
+                      "name": "pgsql03",
+                      "range": "10.0.0.0/23"
+                    },
+                    "subnet01": {
+                      "id": "subnet01_id",
+                      "name": "subnet01",
+                      "range": "10.0.2.0/24"
+                    },
+                    "subnet02": {
+                      "id": "subnet02_id",
+                      "name": "subnet02",
+                      "range": "10.0.3.0/24"
+                    }
+                  }
                 },
                 "vneth": {
                   "description": "some text",
                   "env": "prod",
                   "id": "vneth_id",
-                  "name": "vneth"
+                  "name": "vneth",
+                  "subnets": {
+                    "pgsql03": {
+                      "id": "pgsql03_id",
+                      "name": "pgsql03",
+                      "range": "10.0.0.0/23"
+                    },
+                    "subnet01": {
+                      "id": "subnet01_id",
+                      "name": "subnet01",
+                      "range": "10.0.2.0/24"
+                    },
+                    "subnet02": {
+                      "id": "subnet02_id",
+                      "name": "subnet02",
+                      "range": "10.0.3.0/24"
+                    }
+                  }
                 }
               }
             }
@@ -135,13 +491,47 @@
                   "description": "something something",
                   "env": "uat",
                   "id": "vneta_id",
-                  "name": "vneta"
+                  "name": "vneta",
+                  "subnets": {
+                    "pgsql03": {
+                      "id": "pgsql03_id",
+                      "name": "pgsql03",
+                      "range": "10.0.0.0/23"
+                    },
+                    "subnet01": {
+                      "id": "subnet01_id",
+                      "name": "subnet01",
+                      "range": "10.0.2.0/24"
+                    },
+                    "subnet02": {
+                      "id": "subnet02_id",
+                      "name": "subnet02",
+                      "range": "10.0.3.0/24"
+                    }
+                  }
                 },
                 "vnetb": {
                   "description": "some text",
                   "env": "uat",
                   "id": "vnetb_id",
-                  "name": "vnetb"
+                  "name": "vnetb",
+                  "subnets": {
+                    "pgsql03": {
+                      "id": "pgsql03_id",
+                      "name": "pgsql03",
+                      "range": "10.0.0.0/23"
+                    },
+                    "subnet01": {
+                      "id": "subnet01_id",
+                      "name": "subnet01",
+                      "range": "10.0.2.0/24"
+                    },
+                    "subnet02": {
+                      "id": "subnet02_id",
+                      "name": "subnet02",
+                      "range": "10.0.3.0/24"
+                    }
+                  }
                 }
               }
             },
@@ -152,13 +542,47 @@
                   "description": "something something",
                   "env": "uat",
                   "id": "vnetc_id",
-                  "name": "vnetc"
+                  "name": "vnetc",
+                  "subnets": {
+                    "pgsql03": {
+                      "id": "pgsql03_id",
+                      "name": "pgsql03",
+                      "range": "10.0.0.0/23"
+                    },
+                    "subnet01": {
+                      "id": "subnet01_id",
+                      "name": "subnet01",
+                      "range": "10.0.2.0/24"
+                    },
+                    "subnet02": {
+                      "id": "subnet02_id",
+                      "name": "subnet02",
+                      "range": "10.0.3.0/24"
+                    }
+                  }
                 },
                 "vnetd": {
                   "description": "some text",
                   "env": "uat",
                   "id": "vnetd_id",
-                  "name": "vnetd"
+                  "name": "vnetd",
+                  "subnets": {
+                    "pgsql03": {
+                      "id": "pgsql03_id",
+                      "name": "pgsql03",
+                      "range": "10.0.0.0/23"
+                    },
+                    "subnet01": {
+                      "id": "subnet01_id",
+                      "name": "subnet01",
+                      "range": "10.0.2.0/24"
+                    },
+                    "subnet02": {
+                      "id": "subnet02_id",
+                      "name": "subnet02",
+                      "range": "10.0.3.0/24"
+                    }
+                  }
                 }
               }
             }

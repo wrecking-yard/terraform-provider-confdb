@@ -86,5 +86,6 @@ func (p *confDBProvider) DataSources(_ context.Context) []func() datasource.Data
 	return []func() datasource.DataSource{
 		NewVnetDataSource,
 		NewDefaultVnetDataSource,
+		NewDefaultSubnetDataSource,
 	}
 }

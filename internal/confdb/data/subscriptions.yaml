@@ -9,16 +9,45 @@ subscriptions:
             northeurope:
               name: northeurope
               vnets:
-                vnet1:
+                vnet1: &default_vnet
                   id: vnet1_id
                   name: vnet1
                   description: something something
                   env: *environment
+                  subnets:
+                    subnet01: &default_subnet
+                      id: subnet01_id
+                      name: subnet01
+                      range: 10.0.2.0/24
+                    subnet02:
+                      id: subnet02_id
+                      name: subnet02
+                      range: 10.0.3.0/24
+                    pgsql03:
+                      id: pgsql03_id
+                      name: pgsql03
+                      range: 10.0.0.0/23
+                    default: *default_subnet
                 vnet2:
                   id: vnet2_id
                   name: vnet2
                   description: some text
                   env: *environment
+                  subnets:
+                    subnet01:
+                      id: subnet01_id
+                      name: subnet01
+                      range: 10.0.2.0/24
+                    subnet02: &default_subnet
+                      id: subnet02_id
+                      name: subnet02
+                      range: 10.0.3.0/24
+                    pgsql03:
+                      id: pgsql03_id
+                      name: pgsql03
+                      range: 10.0.0.0/23
+                    default: *default_subnet
+                default: *default_vnet
             westeurope:
               name: westeurope
               vnets:
@@ -27,40 +56,127 @@ subscriptions:
                   name: vnet3
                   description: something something
                   env: *environment
-                vnet4:
+                  subnets:
+                    subnet01: &default_subnet
+                      id: subnet01_id
+                      name: subnet01
+                      range: 10.0.2.0/24
+                    subnet02:
+                      id: subnet02_id
+                      name: subnet02
+                      range: 10.0.3.0/24
+                    pgsql03:
+                      id: pgsql03_id
+                      name: pgsql03
+                      range: 10.0.0.0/23
+                    default: *default_subnet
+                vnet4: &default_vnet
                   id: vnet4_id
                   name: vnet4
                   description: some text
                   env: *environment
+                  subnets:
+                    subnet01: &default_subnet
+                      id: subnet01_id
+                      name: subnet01
+                      range: 10.0.2.0/24
+                    subnet02:
+                      id: subnet02_id
+                      name: subnet02
+                      range: 10.0.3.0/24
+                    pgsql03:
+                      id: pgsql03_id
+                      name: pgsql03
+                      range: 10.0.0.0/23
+                    default: *default_subnet
+                default: *default_vnet
         dev:
           name: &environment dev
           regions:
             northeurope:
               name: northeurope
               vnets:
-                vnet5:
+                vnet5: &default_vnet
                   id: vnet5_id
                   name: vnet5
                   description: something something
                   env: *environment
+                  subnets:
+                    subnet01:
+                      id: subnet01_id
+                      name: subnet01
+                      range: 10.0.2.0/24
+                    subnet02: &default_subnet
+                      id: subnet02_id
+                      name: subnet02
+                      range: 10.0.3.0/24
+                    pgsql03:
+                      id: pgsql03_id
+                      name: pgsql03
+                      range: 10.0.0.0/23
+                    default: *default_subnet
+                default: *default_vnet
                 vnet6:
                   id: vnet6_id
                   name: vnet6
                   description: some text
                   env: *environment
+                  subnets:
+                    subnet01:
+                      id: subnet01_id
+                      name: subnet01
+                      range: 10.0.2.0/24
+                    subnet02: &default_subnet
+                      id: subnet02_id
+                      name: subnet02
+                      range: 10.0.3.0/24
+                    pgsql03:
+                      id: pgsql03_id
+                      name: pgsql03
+                      range: 10.0.0.0/23
+                    default: *default_subnet
             westeurope:
               name: westeurope
               vnets:
-                vnet7:
+                vnet7: &default_vnet
                   id: vnet7_id
                   name: vnet7
                   description: something something
                   env: *environment
+                  subnets:
+                    subnet01: &default_subnet
+                      id: subnet01_id
+                      name: subnet01
+                      range: 10.0.2.0/24
+                    subnet02:
+                      id: subnet02_id
+                      name: subnet02
+                      range: 10.0.3.0/24
+                    pgsql03:
+                      id: pgsql03_id
+                      name: pgsql03
+                      range: 10.0.0.0/23
+                    default: *default_subnet
+                default: *default_vnet
                 vnet8:
                   id: vnet8_id
                   name: vnet8
                   description: some text
                   env: *environment
+                  subnets:
+                    subnet01:
+                      id: subnet01_id
+                      name: subnet01
+                      range: 10.0.2.0/24
+                    subnet02: &default_subnet
+                      id: subnet02_id
+                      name: subnet02
+                      range: 10.0.3.0/24
+                    pgsql03:
+                      id: pgsql03_id
+                      name: pgsql03
+                      range: 10.0.0.0/23
+                    default: *default_subnet
   sub2:
     name: sub2
     id: sub2_id
@@ -76,11 +192,37 @@ subscriptions:
                   name: vneta
                   description: something something
                   env: *environment
+                  subnets:
+                    subnet01:
+                      id: subnet01_id
+                      name: subnet01
+                      range: 10.0.2.0/24
+                    subnet02:
+                      id: subnet02_id
+                      name: subnet02
+                      range: 10.0.3.0/24
+                    pgsql03:
+                      id: pgsql03_id
+                      name: pgsql03
+                      range: 10.0.0.0/23
                 vnetb:
                   id: vnetb_id
                   name: vnetb
                   description: some text
                   env: *environment
+                  subnets:
+                    subnet01:
+                      id: subnet01_id
+                      name: subnet01
+                      range: 10.0.2.0/24
+                    subnet02:
+                      id: subnet02_id
+                      name: subnet02
+                      range: 10.0.3.0/24
+                    pgsql03:
+                      id: pgsql03_id
+                      name: pgsql03
+                      range: 10.0.0.0/23
             westeurope:
               name: westeurope
               vnets:
@@ -89,11 +231,37 @@ subscriptions:
                   name: vnetc
                   description: something something
                   env: *environment
+                  subnets:
+                    subnet01:
+                      id: subnet01_id
+                      name: subnet01
+                      range: 10.0.2.0/24
+                    subnet02:
+                      id: subnet02_id
+                      name: subnet02
+                      range: 10.0.3.0/24
+                    pgsql03:
+                      id: pgsql03_id
+                      name: pgsql03
+                      range: 10.0.0.0/23
                 vnetd:
                   id: vnetd_id
                   name: vnetd
                   description: some text
                   env: *environment
+                  subnets:
+                    subnet01:
+                      id: subnet01_id
+                      name: subnet01
+                      range: 10.0.2.0/24
+                    subnet02:
+                      id: subnet02_id
+                      name: subnet02
+                      range: 10.0.3.0/24
+                    pgsql03:
+                      id: pgsql03_id
+                      name: pgsql03
+                      range: 10.0.0.0/23
         prod:
           name: &environment prod
           regions:
@@ -105,11 +273,37 @@ subscriptions:
                   name: vnete
                   description: something something
                   env: *environment
+                  subnets:
+                    subnet01:
+                      id: subnet01_id
+                      name: subnet01
+                      range: 10.0.2.0/24
+                    subnet02:
+                      id: subnet02_id
+                      name: subnet02
+                      range: 10.0.3.0/24
+                    pgsql03:
+                      id: pgsql03_id
+                      name: pgsql03
+                      range: 10.0.0.0/23
                 vnetf:
                   id: vnetf_id
                   name: vnetf
                   description: some text
                   env: *environment
+                  subnets:
+                    subnet01:
+                      id: subnet01_id
+                      name: subnet01
+                      range: 10.0.2.0/24
+                    subnet02:
+                      id: subnet02_id
+                      name: subnet02
+                      range: 10.0.3.0/24
+                    pgsql03:
+                      id: pgsql03_id
+                      name: pgsql03
+                      range: 10.0.0.0/23
             westeurope:
               name: westeurope
               vnets:
@@ -118,8 +312,34 @@ subscriptions:
                   name: vnetg
                   description: something something
                   env: *environment
+                  subnets:
+                    subnet01:
+                      id: subnet01_id
+                      name: subnet01
+                      range: 10.0.2.0/24
+                    subnet02:
+                      id: subnet02_id
+                      name: subnet02
+                      range: 10.0.3.0/24
+                    pgsql03:
+                      id: pgsql03_id
+                      name: pgsql03
+                      range: 10.0.0.0/23
                 vneth:
                   id: vneth_id
                   name: vneth
                   description: some text
                   env: *environment
+                  subnets:
+                    subnet01:
+                      id: subnet01_id
+                      name: subnet01
+                      range: 10.0.2.0/24
+                    subnet02:
+                      id: subnet02_id
+                      name: subnet02
+                      range: 10.0.3.0/24
+                    pgsql03:
+                      id: pgsql03_id
+                      name: pgsql03
+                      range: 10.0.0.0/23

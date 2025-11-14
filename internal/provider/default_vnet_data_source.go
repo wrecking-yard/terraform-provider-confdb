@@ -11,11 +11,6 @@ import (
 	"github.com/hashicorp/terraform-plugin-framework/types"
 )
 
-// defaultVnetDataSourceModel maps the data source schema data.
-type defaultVnetDataSourceModel struct {
-	Vnet defaultVnetModel `tfsdk:"default_vnet"`
-}
-
 // defaultVnetModel maps defaultVnet schema data.
 type defaultVnetModel struct {
 	ID          types.String `tfsdk:"id"`
@@ -47,25 +42,20 @@ func (d *defaultVnetDataSource) Metadata(_ context.Context, req datasource.Metad
 func (d *defaultVnetDataSource) Schema(_ context.Context, _ datasource.SchemaRequest, resp *datasource.SchemaResponse) {
 	resp.Schema = schema.Schema{
 		Attributes: map[string]schema.Attribute{
-			"default_vnet": schema.SingleNestedAttribute{
+			"region": schema.StringAttribute{
 				Computed: true,
-				Attributes: map[string]schema.Attribute{
-					"region": schema.StringAttribute{
-						Required: true,
-					},
-					"environment": schema.StringAttribute{
-						Required: true,
-					},
-					"id": schema.StringAttribute{
-						Computed: true,
-					},
-					"name": schema.StringAttribute{
-						Computed: true,
-					},
-					"description": schema.StringAttribute{
-						Computed: true,
-					},
-				},
+			},
+			"environment": schema.StringAttribute{
+				Computed: true,
+			},
+			"id": schema.StringAttribute{
+				Computed: true,
+			},
+			"name": schema.StringAttribute{
+				Computed: true,
+			},
+			"description": schema.StringAttribute{
+				Computed: true,
 			},
 		},
 	}
@@ -83,14 +73,12 @@ func (d *defaultVnetDataSource) Read(ctx context.Context, req datasource.ReadReq
 	_ = json.Unmarshal(_json, &_defaultVnet)
 
 	// Map response body to model
-	defaultVnetState := defaultVnetDataSourceModel{
-		Vnet: defaultVnetModel{
-			ID:          types.StringValue(_defaultVnet.ID),
-			Name:        types.StringValue(_defaultVnet.Name),
-			Description: types.StringValue("something something"),
-			Region:      types.StringValue(region),
-			Environment: types.StringValue(environment),
-		},
+	defaultVnetState := defaultVnetModel{
+		ID:          types.StringValue(_defaultVnet.ID),
+		Name:        types.StringValue(_defaultVnet.Name),
+		Description: types.StringValue("something something"),
+		Region:      types.StringValue(region),
+		Environment: types.StringValue(environment),
 	}
 
 	// Set state
